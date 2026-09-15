@@ -1,0 +1,101 @@
+/* 스크롤 높이는 바깥 영역에, 화면 고정은 안쪽 영역에 적용합니다. */
+.intro-scroll { position: relative; }
+.intro-scroll.is-ready {
+  height: 320svh;
+  --decoration-opacity: 1;
+  --decoration-scale: 1;
+  --hero-opacity: 1;
+  --hero-y: 0px;
+  --work-opacity: 0;
+  --work-scale: .82;
+  --work-y: 80px;
+}
+.intro-scroll.is-ready .intro-sticky {
+  position: sticky;
+  top: 0;
+  display: grid;
+  height: 100svh;
+  isolation: isolate;
+}
+.intro-scroll.is-ready .intro-sticky > section {
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+.intro-scroll.is-ready .hero {
+  z-index: 1;
+  padding-block: clamp(32px, 6svh, 80px);
+}
+.intro-scroll.is-ready .hero-decoration {
+  opacity: var(--decoration-opacity);
+  transform: scale(var(--decoration-scale));
+}
+.intro-scroll.is-ready .hero-inner {
+  opacity: var(--hero-opacity);
+  transform: translateY(var(--hero-y));
+}
+.work-preview {
+  display: grid;
+  align-items: center;
+  padding-block: clamp(32px, 6svh, 80px);
+  background: #fff;
+}
+.intro-scroll.is-ready .work-preview {
+  position: relative;
+  z-index: 2;
+  opacity: var(--work-opacity);
+  transform: translateY(var(--work-y)) scale(var(--work-scale));
+  transform-origin: center;
+}
+.work-preview-inner { text-align: center; }
+.work-preview .section-label {
+  margin-bottom: 12px;
+  color: #ff481f;
+  font-size: 12px;
+  letter-spacing: .2em;
+}
+.work-preview h2 {
+  font-size: clamp(30px, 4.5vw, 72px);
+  line-height: 1.1;
+}
+.work-preview-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-block: 32px;
+}
+.work-preview-figure {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  background: #f6f5f3;
+}
+.work-preview-figure img {
+  width: 100%;
+  max-height: 24svh;
+  object-fit: contain;
+}
+.work-preview figcaption { font-size: 13px; }
+.work-preview .section-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #ff481f;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .header-inner { min-height: 72px; padding-block: 12px; }
+  .nav-list { column-gap: 18px; }
+  .nav-list a { font-size: 11px; }
+  .work-preview-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-block: 24px; }
+  .work-preview-figure { min-height: 100px; padding: 12px; }
+  .work-preview figcaption { font-size: 11px; }
+}
