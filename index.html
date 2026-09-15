@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/intro.css">
     <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/visual-works.css">
+    <link rel="stylesheet" href="./css/web-projects.css">
+    <script src="./js/visual-works.js" defer></script>
+    <script src="./js/web-projects.js" defer></script>
     <script src="./js/index.js" defer></script>
-    <script src="./js/visual.js" defer></script>
 </head>
 
 <body>
@@ -35,143 +38,148 @@
     </header>
     <main id="main-content">
         <div class="intro-scroll">
-          <div class="intro-sticky">
-        <section id="about" class="hero" aria-labelledby="hero-title">
-            <!-- 배경 장식: 스크린리더에서는 읽지 않습니다. -->
-            <div class="hero-decoration" aria-hidden="true">
-                <div class="hero-circle hero-circle-design">
-                    <span>DESIGN</span>
-                </div>
-
-                <div class="hero-circle hero-circle-code">
-                    <span>HTML / CSS</span>
-                </div>
-
-                <div class="hero-circle hero-circle-gray"></div>
-
-                <div class="hero-circle hero-circle-arrow">
-                    <span>↗</span>
-                </div>
-
-                <div class="hero-circle hero-circle-creative">
-                    <span>CREATIVE</span>
-                </div>
-
-                <div class="hero-tag">PUBLISHING</div>
-
-                <span class="hero-dot hero-dot-left"></span>
-                <span class="hero-dot hero-dot-right"></span>
-                <span class="hero-dot hero-dot-bottom"></span>
-            </div>
-
-            <!-- 주요 콘텐츠 -->
-            <div class="container hero-inner">
-                <h1 id="hero-title" class="hero-title" lang="en">
-                    <span class="hero-title-line">BASIC MAKES</span>
-                    <span class="hero-title-line">BETTER DESIGN.</span>
-                </h1>
-
-                <p class="hero-description">
-                    디자인의 기본에서 좋은 화면이 시작된다고 생각합니다.
-                </p>
-
-                <a class="hero-link" href="#work-preview">
-                    VIEW WORK
-                </a>
-            </div>
-        </section>
-        <section id="work-preview" class="work-preview" aria-labelledby="work-preview-title">
-            <div class="container work-preview-inner">
-
-                <p class="work-note work-note-left" aria-hidden="true">Ideas<br>into<br>Experiences</p>
-                <p class="work-note work-note-top" aria-hidden="true">Design<br>for a brighter<br>tomorrow</p>
-                <p class="work-note work-note-middle" aria-hidden="true">Small<br>Details<br>Big Impact</p>
-                <p class="work-note work-note-right" aria-hidden="true">More<br>Human<br>Stories</p>
-                <p class="work-note work-note-bottom" aria-hidden="true">Ideas<br>Travel<br>Further</p>
-
-                <article class="featured-work featured-work-uiux">
-                    <div class="featured-work-media mock-uiux" aria-hidden="true">
-                        <div class="mock-window">
-                            <div class="mock-window-bar"><span></span><span></span><span></span></div>
-                            <div class="mock-window-content">
-                                <div class="mock-copy">
-                                    <span>Studio</span>
-                                    <strong>Design<br>a Brighter<br>Tomorrow</strong>
-                                    <i>Explore →</i>
-                                </div>
-                                <div class="mock-gallery"><span></span><span></span><span></span><span></span></div>
-                            </div>
+            <div class="intro-sticky">
+                <section id="about" class="hero" aria-labelledby="hero-title">
+                    <!-- 배경 장식: 스크린리더에서는 읽지 않습니다. -->
+                    <div class="hero-decoration" aria-hidden="true">
+                        <div class="hero-circle hero-circle-design">
+                            <span>DESIGN</span>
                         </div>
-                    </div>
-                    <div class="featured-work-meta">
-                        <div class="work-index"><span>01</span><i></i></div>
-                        <h3>UI/UX DESIGN</h3>
-                        <p>IDEAS INTO EXPERIENCES</p>
-                    </div>
-                </article>
 
-                <article class="featured-work featured-work-poster">
-                    <div class="featured-work-media mock-poster" aria-hidden="true">
-                        <div class="poster-card">
-                            <span class="poster-kicker">GOOD IDEAS</span>
-                            <strong>BRIGHTER<br>TOMORROWS</strong>
-                            <span class="poster-line"></span>
+                        <div class="hero-circle hero-circle-code">
+                            <span>HTML / CSS</span>
                         </div>
-                    </div>
-                    <div class="featured-work-meta">
-                        <div class="work-index"><span>02</span><i></i></div>
-                        <h3>POSTER DESIGN</h3>
-                        <p>VISUAL STORYTELLING</p>
-                    </div>
-                </article>
 
-                <article class="featured-work featured-work-product">
-                    <div class="featured-work-media mock-product" aria-hidden="true">
-                        <div class="product-browser">
-                            <div class="product-nav"><strong>NORDEN</strong><span>Home&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;About</span></div>
-                            <div class="product-screen">
-                                <div class="product-thumb-list"><span></span><span></span><span></span><span></span></div>
-                                <div class="product-object"></div>
-                                <div class="product-copy">
-                                    <span>THE EVERYDAY</span>
-                                    <strong>Chair</strong>
-                                    <b>$249</b>
-                                    <i>Add to Cart</i>
+                        <div class="hero-circle hero-circle-gray"></div>
+
+                        <div class="hero-circle hero-circle-arrow">
+                            <span>↗</span>
+                        </div>
+
+                        <div class="hero-circle hero-circle-creative">
+                            <span>CREATIVE</span>
+                        </div>
+
+                        <div class="hero-tag">PUBLISHING</div>
+
+                        <span class="hero-dot hero-dot-left"></span>
+                        <span class="hero-dot hero-dot-right"></span>
+                        <span class="hero-dot hero-dot-bottom"></span>
+                    </div>
+
+                    <!-- 주요 콘텐츠 -->
+                    <div class="container hero-inner">
+                        <h1 id="hero-title" class="hero-title" lang="en">
+                            <span class="hero-title-line">BASIC MAKES</span>
+                            <span class="hero-title-line">BETTER DESIGN.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            디자인의 기본에서 좋은 화면이 시작된다고 생각합니다.
+                        </p>
+
+                        <a class="hero-link" href="#work-preview">
+                            VIEW WORK
+                        </a>
+                    </div>
+                </section>
+                <section id="work-preview" class="work-preview" aria-labelledby="work-preview-title">
+                    <div class="container work-preview-inner">
+
+                        <p class="work-note work-note-left" aria-hidden="true">Ideas<br>into<br>Experiences</p>
+                        <p class="work-note work-note-top" aria-hidden="true">Design<br>for a brighter<br>tomorrow</p>
+                        <p class="work-note work-note-middle" aria-hidden="true">Small<br>Details<br>Big Impact</p>
+                        <p class="work-note work-note-right" aria-hidden="true">More<br>Human<br>Stories</p>
+                        <p class="work-note work-note-bottom" aria-hidden="true">Ideas<br>Travel<br>Further</p>
+
+                        <article class="featured-work featured-work-uiux">
+                            <div class="featured-work-media mock-uiux" aria-hidden="true">
+                                <div class="mock-window">
+                                    <div class="mock-window-bar"><span></span><span></span><span></span></div>
+                                    <div class="mock-window-content">
+                                        <div class="mock-copy">
+                                            <span>Studio</span>
+                                            <strong>Design<br>a Brighter<br>Tomorrow</strong>
+                                            <i>Explore →</i>
+                                        </div>
+                                        <div class="mock-gallery"><span></span><span></span><span></span><span></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="featured-work-meta">
-                        <div class="work-index"><span>03</span><i></i></div>
-                        <h3>PRODUCT PAGE</h3>
-                        <p>BRAND EXPERIENCE</p>
-                    </div>
-                </article>
+                            <div class="featured-work-meta">
+                                <div class="work-index"><span>01</span><i></i></div>
+                                <h3>UI/UX DESIGN</h3>
+                                <p>IDEAS INTO EXPERIENCES</p>
+                            </div>
+                        </article>
 
-                <div class="work-preview-title">
-                    <p class="section-label">CREATIVE WORKS</p>
-                    <h2 id="work-preview-title" lang="en">for a Brighter<br>Tomorrow</h2>
-                    <p class="work-preview-tagline">DESIGN × PEOPLE × A BRIGHTER TOMORROW</p>
-                </div>
+                        <article class="featured-work featured-work-poster">
+                            <div class="featured-work-media mock-poster" aria-hidden="true">
+                                <div class="poster-card">
+                                    <span class="poster-kicker">GOOD IDEAS</span>
+                                    <strong>BRIGHTER<br>TOMORROWS</strong>
+                                    <span class="poster-line"></span>
+                                </div>
+                            </div>
+                            <div class="featured-work-meta">
+                                <div class="work-index"><span>02</span><i></i></div>
+                                <h3>POSTER DESIGN</h3>
+                                <p>VISUAL STORYTELLING</p>
+                            </div>
+                        </article>
 
-                <article class="featured-work featured-work-popup">
-                    <div class="featured-work-media mock-popup" aria-hidden="true">
-                        <div class="popup-overlay">
-                            <span class="popup-close">×</span>
-                            <strong>Discover<br>What’s Next</strong>
-                            <p>Stories, visuals, and ideas<br>for a brighter tomorrow.</p>
-                            <div class="popup-form"><span>Your email address</span><b>Subscribe</b></div>
+                        <article class="featured-work featured-work-product">
+                            <div class="featured-work-media mock-product" aria-hidden="true">
+                                <div class="product-browser">
+                                    <div class="product-nav">
+                                        <strong>NORDEN</strong><span>Home&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;About</span>
+                                    </div>
+                                    <div class="product-screen">
+                                        <div class="product-thumb-list">
+                                            <span></span><span></span><span></span><span></span>
+                                        </div>
+                                        <div class="product-object"></div>
+                                        <div class="product-copy">
+                                            <span>THE EVERYDAY</span>
+                                            <strong>Chair</strong>
+                                            <b>$249</b>
+                                            <i>Add to Cart</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-work-meta">
+                                <div class="work-index"><span>03</span><i></i></div>
+                                <h3>PRODUCT PAGE</h3>
+                                <p>BRAND EXPERIENCE</p>
+                            </div>
+                        </article>
+
+                        <div class="work-preview-title">
+                            <p class="section-label">CREATIVE WORKS</p>
+                            <h2 id="work-preview-title" lang="en">for a Brighter<br>Tomorrow</h2>
+                            <p class="work-preview-tagline">DESIGN × PEOPLE × A BRIGHTER TOMORROW</p>
                         </div>
+
+                        <article class="featured-work featured-work-popup">
+                            <div class="featured-work-media mock-popup" aria-hidden="true">
+                                <div class="popup-overlay">
+                                    <span class="popup-close">×</span>
+                                    <strong>Discover<br>What’s Next</strong>
+                                    <p>Stories, visuals, and ideas<br>for a brighter tomorrow.</p>
+                                    <div class="popup-form"><span>Your email address</span><b>Subscribe</b></div>
+                                </div>
+                            </div>
+                            <div class="featured-work-meta">
+                                <div class="work-index"><span>04</span><i></i></div>
+                                <h3>POPUP DESIGN</h3>
+                                <p>SMALL DETAILS. BIG IMPACT</p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="featured-work-meta">
-                        <div class="work-index"><span>04</span><i></i></div>
-                        <h3>POPUP DESIGN</h3>
-                        <p>SMALL DETAILS. BIG IMPACT</p>
-                    </div>
-                </article>
+                </section>
             </div>
-        </section>
-          </div>
         </div>
         <section id="profile" class="profile" aria-labelledby="profile-title">
             <div class="container profile-inner">
@@ -294,7 +302,8 @@
                             </ul>
                         </div>
 
-                        <p class="skill-keywords">CODE&nbsp;&nbsp;/&nbsp;&nbsp;DEPLOY&nbsp;&nbsp;/&nbsp;&nbsp;COLLABORATION</p>
+                        <p class="skill-keywords">
+                            CODE&nbsp;&nbsp;/&nbsp;&nbsp;DEPLOY&nbsp;&nbsp;/&nbsp;&nbsp;COLLABORATION</p>
                     </section>
                 </div>
             </div>
@@ -324,11 +333,7 @@
                 <!-- 선택한 작품 미리보기 -->
                 <article class="design-work-preview" aria-live="polite">
                     <div class="design-work-preview-media">
-                        <img
-                            id="designPreviewImage"
-                            src="./img/profile-workspace.jpg"
-                            alt="UI Design 작업 미리보기"
-                        >
+                        <img id="designPreviewImage" src="./img/profile-workspace.jpg" alt="UI Design 작업 미리보기">
                     </div>
 
                     <div class="design-work-preview-info">
@@ -344,97 +349,82 @@
                     </div>
                 </article>
 
-                <!-- 오른쪽 원형 포트폴리오 메뉴 -->
+                <!-- 오른쪽 작품 카테고리 -->
+                <!-- 오른쪽 원형 작품 카테고리 -->
                 <nav class="design-orbit" aria-label="작품 카테고리">
+
+                    <!-- 원형 라인 -->
                     <div class="design-orbit-circle" aria-hidden="true"></div>
 
-                    <!--
-                        data-image는 실제 작품 이미지 경로로 바꾸면 됩니다.
-                        예: ./img/work-ui.jpg, ./img/work-poster.jpg
-                    -->
-                    <button
-                        class="design-orbit-item orbit-ui is-active"
-                        type="button"
-                        data-category="UI DESIGN"
-                        data-title="UI / UX Design"
-                        data-description="사용자 경험과 정보 구조를 고려한 웹 인터페이스 디자인입니다."
-                        data-image="./img/profile-workspace.jpg"
-                        data-target="#visual-works"
-                    >
+
+                    <!-- 원 가운데 선택된 카테고리 -->
+                    <div class="design-orbit-center" id="designOrbitCenter" aria-live="polite">
+                        Publishing
+                    </div>
+
+
+                    <!-- UI DESIGN -->
+                    <button class="design-orbit-item orbit-ui" type="button" data-center="UI Design"
+                        data-category="UI DESIGN" data-title="UI / UX Design"
+                        data-description="사용자 경험과 정보 구조를 고려한 웹 인터페이스 디자인입니다." data-image="./img/ui-design.jpg"
+                        data-target="#visual-works">
                         UI Design
                     </button>
 
-                    <button
-                        class="design-orbit-item orbit-publishing"
-                        type="button"
-                        data-category="PUBLISHING"
-                        data-title="Web Publishing"
+
+                    <!-- PUBLISHING -->
+                    <button class="design-orbit-item orbit-publishing is-active" type="button" data-center="Publishing"
+                        data-category="PUBLISHING" data-title="Web Publishing"
                         data-description="HTML, CSS, JavaScript를 활용해 반응형 웹 화면을 구현합니다."
-                        data-image="./img/profile-detail.jpg"
-                        data-target="#web-projects"
-                    >
+                        data-image="./img/profile-workspace.jpg" data-target="#web-projects">
                         Publishing
                     </button>
 
-                    <button
-                        class="design-orbit-item orbit-branding"
-                        type="button"
-                        data-category="BRANDING"
-                        data-title="Branding Design"
-                        data-description="브랜드의 메시지와 이미지를 일관된 시각 언어로 구성합니다."
-                        data-image="./img/profile-workspace.jpg"
-                        data-target="#visual-works"
-                    >
+
+                    <!-- BRANDING -->
+                    <button class="design-orbit-item orbit-branding" type="button" data-center="Branding"
+                        data-category="BRANDING" data-title="Branding Design"
+                        data-description="브랜드의 메시지와 이미지를 일관된 시각 언어로 구성합니다." data-image="./img/branding.jpg"
+                        data-target="#visual-works">
                         Branding
                     </button>
 
-                    <button
-                        class="design-orbit-item orbit-popup"
-                        type="button"
-                        data-category="POPUP DESIGN"
-                        data-title="Popup Design"
-                        data-description="짧은 순간에도 메시지가 명확하게 전달되는 프로모션 디자인입니다."
-                        data-image="./img/profile-detail.jpg"
-                        data-target="#visual-works"
-                    >
+
+                    <!-- POPUPS -->
+                    <button class="design-orbit-item orbit-popup" type="button" data-center="Popups"
+                        data-category="POPUP DESIGN" data-title="Popup Design"
+                        data-description="짧은 순간에도 메시지가 명확하게 전달되는 프로모션 디자인입니다." data-image="./img/popup.jpg"
+                        data-target="#visual-works">
                         Popups
                     </button>
 
-                    <button
-                        class="design-orbit-item orbit-poster"
-                        type="button"
-                        data-category="POSTER DESIGN"
-                        data-title="Poster Design"
-                        data-description="타이포그래피와 이미지를 활용해 시선을 끄는 비주얼을 제작합니다."
-                        data-image="./img/profile-workspace.jpg"
-                        data-target="#visual-works"
-                    >
+
+                    <!-- POSTERS -->
+                    <button class="design-orbit-item orbit-poster" type="button" data-center="Posters"
+                        data-category="POSTER DESIGN" data-title="Poster Design"
+                        data-description="타이포그래피와 이미지를 활용해 시선을 끄는 비주얼을 제작합니다." data-image="./img/poster.jpg"
+                        data-target="#visual-works">
                         Posters
                     </button>
 
-                    <button
-                        class="design-orbit-item orbit-detail"
-                        type="button"
-                        data-category="DETAIL PAGE"
-                        data-title="Detail Pages"
-                        data-description="제품의 특징과 장점을 구조적으로 전달하는 상세페이지 디자인입니다."
-                        data-image="./img/profile-detail.jpg"
-                        data-target="#visual-works"
-                    >
+
+                    <!-- DETAIL PAGES -->
+                    <button class="design-orbit-item orbit-detail" type="button" data-center="Detail Pages"
+                        data-category="DETAIL PAGE" data-title="Detail Pages"
+                        data-description="제품의 특징과 장점을 구조적으로 전달하는 상세페이지 디자인입니다." data-image="./img/detail-page.jpg"
+                        data-target="#visual-works">
                         Detail Pages
                     </button>
 
-                    <button
-                        class="design-orbit-item orbit-projects"
-                        type="button"
-                        data-category="PROJECTS"
-                        data-title="Web Projects"
-                        data-description="기획, 디자인, 퍼블리싱까지 진행한 웹 프로젝트를 소개합니다."
-                        data-image="./img/profile-workspace.jpg"
-                        data-target="#web-projects"
-                    >
+
+                    <!-- PROJECTS -->
+                    <button class="design-orbit-item orbit-projects" type="button" data-center="Projects"
+                        data-category="PROJECTS" data-title="Web Projects"
+                        data-description="기획, 디자인, 퍼블리싱까지 진행한 웹 프로젝트를 소개합니다." data-image="./img/projects.jpg"
+                        data-target="#web-projects">
                         Projects
                     </button>
+
                 </nav>
             </div>
         </section>
@@ -508,4 +498,3 @@
 </body>
 
 </html>
-
