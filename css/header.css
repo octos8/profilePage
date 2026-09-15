@@ -1,0 +1,33 @@
+/* 상단 메뉴 */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+}
+
+.site-nav {
+  max-width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: clamp(24px, 5vw, 96px);
+  row-gap: 4px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: var(--color-accent);
+}

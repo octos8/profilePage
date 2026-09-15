@@ -1,0 +1,467 @@
+/* 흰 배경 */
+body,
+.site-header {
+  background-color: #fff;
+}
+
+/* Hero 전체 영역 */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+
+  min-height: calc(100svh - 88px);
+  padding-block: clamp(100px, 10vw, 180px);
+
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* 중앙 콘텐츠 */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.hero-title {
+  max-width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(44px, 6.1vw, 118px);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  color: #080808;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-line + .hero-title-line {
+  margin-top: 0.08em;
+}
+
+.hero-description {
+  max-width: 42rem;
+  margin-top: 28px;
+  font-size: clamp(14px, 1.35vw, 24px);
+  line-height: 1.7;
+  color: #171717;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 56px;
+  margin-top: 36px;
+  padding: 14px 48px;
+
+  border-radius: 999px;
+  background-color: #ff481f;
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-link:hover {
+  background-color: #e83912;
+  transform: translateY(-2px);
+}
+
+/* 장식 요소 전체 */
+.hero-decoration {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 원 공통 */
+.hero-circle {
+  position: absolute;
+  display: grid;
+  place-items: center;
+
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.hero-circle span {
+  white-space: nowrap;
+}
+
+/* 왼쪽 위: DESIGN */
+.hero-circle-design {
+  top: -15%;
+  left: -3%;
+  width: clamp(200px, 23vw, 440px);
+
+  border: 1.5px solid #171717;
+}
+
+.hero-circle-design span {
+  font-size: clamp(26px, 3.4vw, 64px);
+  letter-spacing: 0.02em;
+  transform: rotate(-40deg);
+}
+
+/* 오른쪽 위: HTML / CSS */
+.hero-circle-code {
+  top: -25%;
+  right: -5%;
+  width: clamp(240px, 28vw, 540px);
+
+  background-color: #eaeaea;
+}
+
+.hero-circle-code span {
+  font-size: clamp(22px, 2.6vw, 48px);
+  transform: translateY(80%) rotate(-25deg);
+}
+
+/* 왼쪽 아래: 회색 원 */
+.hero-circle-gray {
+  bottom: -10%;
+  left: -8%;
+  width: clamp(260px, 28vw, 540px);
+
+  background-color: #eaeaea;
+}
+
+/* 왼쪽 아래: 주황색 화살표 원 */
+.hero-circle-arrow {
+  bottom: 15%;
+  left: 11%;
+  width: clamp(88px, 9vw, 172px);
+
+  background-color: #ff481f;
+  color: #fff;
+}
+
+.hero-circle-arrow span {
+  font-size: clamp(46px, 5vw, 96px);
+  line-height: 1;
+}
+
+/* 오른쪽 아래: CREATIVE */
+.hero-circle-creative {
+  right: -4%;
+  bottom: -17%;
+  width: clamp(240px, 27vw, 520px);
+
+  border: 1.5px solid #171717;
+}
+
+.hero-circle-creative span {
+  font-size: clamp(28px, 3.5vw, 66px);
+  letter-spacing: 0.02em;
+  transform: rotate(-30deg);
+}
+
+/* 오른쪽 작은 키워드 */
+.hero-tag {
+  position: absolute;
+  top: 39%;
+  right: 5%;
+
+  padding: 8px 22px;
+  border: 1.5px solid #171717;
+  border-radius: 999px;
+
+  font-size: clamp(14px, 1.45vw, 26px);
+  line-height: 1.3;
+  transform: rotate(-15deg);
+}
+
+/* 주황색 작은 점 */
+.hero-dot {
+  position: absolute;
+  width: clamp(10px, 1.35vw, 26px);
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  background-color: #ff481f;
+}
+
+.hero-dot-left {
+  top: 24%;
+  left: 20%;
+}
+
+.hero-dot-right {
+  top: 20%;
+  right: 21%;
+}
+
+.hero-dot-bottom {
+  right: 6%;
+  bottom: 30%;
+}
+
+/* 태블릿: 중앙 문구 주변 공간 확보 */
+@media (max-width: 1024px) {
+  .hero-circle-design {
+    left: -10%;
+  }
+
+  .hero-circle-code {
+    right: -14%;
+  }
+
+  .hero-circle-creative {
+    right: -12%;
+  }
+
+  .hero-tag {
+    top: auto;
+    right: 6%;
+    bottom: 18%;
+    font-size: 16px;
+  }
+
+  .hero-description {
+    max-width: 34rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .hero {
+    min-height: calc(100svh - 72px);
+    padding-block: 150px;
+  }
+
+  .hero-title {
+    font-size: clamp(26px, 8vw, 48px);
+    letter-spacing: -0.06em;
+  }
+
+  .hero-description {
+    max-width: 28ch;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+
+  .hero-link {
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+
+  .hero-circle-design {
+    top: -90px;
+    left: -70px;
+    width: 210px;
+  }
+
+  .hero-circle-design span {
+    font-size: 26px;
+  }
+
+  .hero-circle-code {
+    top: -110px;
+    right: -95px;
+    width: 240px;
+  }
+
+  .hero-circle-code span {
+    font-size: 20px;
+  }
+
+  .hero-circle-gray {
+    bottom: -110px;
+    left: -120px;
+    width: 260px;
+  }
+
+  .hero-circle-arrow {
+    bottom: 32px;
+    left: 26px;
+    width: 72px;
+  }
+
+  .hero-circle-arrow span {
+    font-size: 44px;
+  }
+
+  .hero-circle-creative {
+    right: -90px;
+    bottom: -95px;
+    width: 240px;
+  }
+
+  .hero-circle-creative span {
+    font-size: 28px;
+  }
+
+  .hero-tag {
+    display: none;
+  }
+
+  .hero-dot-left {
+    top: 17%;
+    left: 25%;
+  }
+
+  .hero-dot-right {
+    top: 15%;
+    right: 27%;
+  }
+
+  .hero-dot-bottom {
+    right: 13%;
+    bottom: 18%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-link {
+    transition: none;
+  }
+
+  .hero-link:hover {
+    transform: none;
+  }
+}/* 태블릿: 중앙 문구 주변 공간 확보 */
+@media (max-width: 1024px) {
+  .hero-circle-design {
+    left: -10%;
+  }
+
+  .hero-circle-code {
+    right: -14%;
+  }
+
+  .hero-circle-creative {
+    right: -12%;
+  }
+
+  .hero-tag {
+    top: auto;
+    right: 6%;
+    bottom: 18%;
+    font-size: 16px;
+  }
+
+  .hero-description {
+    max-width: 34rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .hero {
+    min-height: calc(100svh - 72px);
+    padding-block: 150px;
+  }
+
+  .hero-title {
+    font-size: clamp(26px, 8vw, 48px);
+    letter-spacing: -0.06em;
+  }
+
+  .hero-description {
+    max-width: 28ch;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+
+  .hero-link {
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+
+  .hero-circle-design {
+    top: -90px;
+    left: -70px;
+    width: 210px;
+  }
+
+  .hero-circle-design span {
+    font-size: 26px;
+  }
+
+  .hero-circle-code {
+    top: -110px;
+    right: -95px;
+    width: 240px;
+  }
+
+  .hero-circle-code span {
+    font-size: 20px;
+  }
+
+  .hero-circle-gray {
+    bottom: -110px;
+    left: -120px;
+    width: 260px;
+  }
+
+  .hero-circle-arrow {
+    bottom: 32px;
+    left: 26px;
+    width: 72px;
+  }
+
+  .hero-circle-arrow span {
+    font-size: 44px;
+  }
+
+  .hero-circle-creative {
+    right: -90px;
+    bottom: -95px;
+    width: 240px;
+  }
+
+  .hero-circle-creative span {
+    font-size: 28px;
+  }
+
+  .hero-tag {
+    display: none;
+  }
+
+  .hero-dot-left {
+    top: 17%;
+    left: 25%;
+  }
+
+  .hero-dot-right {
+    top: 15%;
+    right: 27%;
+  }
+
+  .hero-dot-bottom {
+    right: 13%;
+    bottom: 18%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-link {
+    transition: none;
+  }
+
+  .hero-link:hover {
+    transform: none;
+  }
+}
