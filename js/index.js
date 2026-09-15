@@ -67,7 +67,7 @@
     }
 
 
-    const progress = clamp(
+    const progress = safeRange(
       -intro.getBoundingClientRect().top /
       distance()
     );
