@@ -1,0 +1,438 @@
+/* =========================================================
+   PROFILE
+   레퍼런스 이미지처럼 상단 소개 + 비대칭 이미지 + 3개의 역량 카드
+   ========================================================= */
+
+.profile {
+  padding: 4rem 0 7rem;
+  background:
+    radial-gradient(circle at 1% 8%, rgba(233, 217, 192, .16), transparent 22rem),
+    radial-gradient(circle at 97% 12%, rgba(225, 208, 178, .12), transparent 20rem),
+    #fffefa;
+  scroll-margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.profile-inner {
+  max-width: 106rem;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: minmax(30rem, .92fr) minmax(0, 1.65fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+.profile .section-label {
+  margin-bottom: 1.25rem;
+  color: #ff4b24;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .015em;
+}
+
+.profile h2 {
+  max-width: 11.3em;
+  color: #080909;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: .97;
+  letter-spacing: -.065em;
+}
+
+.profile h2 span {
+  display: block;
+}
+
+.profile h2 span + span {
+  margin-top: .035em;
+}
+
+.profile-description {
+  max-width: 48rem;
+  margin-top: 1.625rem;
+  color: #66635f;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: -.015em;
+}
+
+.profile-about-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  min-width: 10.25rem;
+  min-height: 3rem;
+  margin-top: 1.75rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: #ff4b24;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    background-color .22s ease,
+    transform .22s ease;
+}
+
+.profile-about-link:hover {
+  background: #111315;
+  transform: translateY(-0.125rem);
+}
+
+.profile-about-link span {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+/* 이미지 */
+.profile-images {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 2.38fr) minmax(13.5rem, .92fr);
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  min-height: 26.875rem;
+}
+
+.profile-image {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background: #ebe6de;
+  box-shadow: 0 .7rem 2.3rem rgba(73, 55, 32, .045);
+}
+
+.profile-image-main {
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 1.46;
+  border-radius: 1.625rem;
+  transform: rotate(1.05deg);
+}
+
+.profile-image-detail {
+  align-self: center;
+  width: 100%;
+  aspect-ratio: .72;
+  margin-top: 2.75rem;
+  border-radius: 1.625rem;
+  transform: rotate(-.7deg);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-hand-note {
+  position: absolute;
+  z-index: 4;
+  top: 23%;
+  left: -1.5%;
+  margin: 0;
+  color: #2d2b28;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: .01em;
+  transform: rotate(-8deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+.profile-hand-note::after {
+  content: "";
+  display: block;
+  width: 2.375rem;
+  height: 1px;
+  margin-top: .5625rem;
+  margin-left: .25rem;
+  background: currentColor;
+  transform: rotate(-11deg);
+}
+
+/* 스킬 카드 */
+.profile .skill-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.profile .skill-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 18.625rem;
+  padding: 1.5rem 1.875rem;
+  flex-direction: column;
+  border: 1px solid rgba(18, 20, 22, .055);
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, .86);
+  box-shadow:
+    0 .8rem 2.5rem rgba(42, 30, 15, .035),
+    inset 0 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.skill-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skill-number {
+  display: block;
+  margin-bottom: .5625rem;
+  color: #1f2224;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.profile .skill-card h3 {
+  max-width: 21rem;
+  color: #090a0b;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+.skill-card-head p {
+  margin-top: .375rem;
+  color: #5c5a57;
+  font-size: 0.6875rem;
+  line-height: 1.42;
+  letter-spacing: -.015em;
+}
+
+.skill-arrow {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 1.625rem;
+  aspect-ratio: 1;
+  margin-top: -.125rem;
+  border: 1px solid #9d9b97;
+  border-radius: 50%;
+  color: #4d4b48;
+  font-size: .875rem;
+  line-height: 1;
+  transition:
+    color .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.skill-arrow:hover {
+  border-color: #ff4b24;
+  color: #ff4b24;
+  transform: translate(0.125rem, -0.125rem);
+}
+
+.skill-card-body {
+  display: grid;
+  grid-template-columns: minmax(11rem, .95fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.375rem;
+}
+
+.skill-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.skill-icons img {
+  width: 2.375rem;
+  height: 2.375rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.profile .skill-items {
+  display: grid;
+  gap: .5rem;
+  min-height: 6.625rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid #d6d3cf;
+  color: #4c4a47;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: .6875rem;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: .075em;
+}
+
+.profile .skill-keywords {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: #ff4b24;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: .02em;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .profile {
+    padding-top: 3.5rem;
+  }
+
+  .profile-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .profile-content {
+    padding-left: 0;
+  }
+
+  .profile h2 {
+    font-size: 2.875rem;
+  }
+
+  .profile-description {
+    max-width: 60ch;
+  }
+
+  .profile-images {
+    max-width: 47.5rem;
+    width: 100%;
+    min-height: 18.75rem;
+  }
+
+  .profile-image-main {
+    aspect-ratio: 1.65;
+  }
+
+  .profile-image-detail {
+    aspect-ratio: .85;
+    margin-top: 1.125rem;
+  }
+
+  .profile .skill-list {
+    gap: .75rem;
+  }
+
+  .profile .skill-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding-top: 3rem;
+  }
+
+  .profile .skill-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .profile .skill-card {
+    padding: 1.625rem;
+  }
+
+  .profile .skill-card h3 {
+    font-size: 1.375rem;
+  }
+
+  .profile-images {
+    gap: .625rem;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+  .profile-image {
+    border-radius: .875rem;
+  }
+
+  .profile-image-main {
+    aspect-ratio: 1.1;
+  }
+
+  .profile-image-detail {
+    aspect-ratio: .6;
+  }
+}
+
+@media (max-width: 402px) {
+  .profile {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .profile h2 {
+    font-size: 2rem;
+  }
+
+  .profile-description {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+
+  .profile .skill-card {
+    padding: 1.25rem;
+  }
+}
+
+    font-size: 1.05rem;
+  }
+
+  .profile-image-detail {
+    aspect-ratio: 1.6;
+  }
+
+  .profile-hand-note-main {
+    left: 3%;
+    top: 18%;
+  }
+
+  .profile .skill-card {
+    padding: 1.55rem;
+    border-radius: 1.4rem;
+  }
+
+  .skill-card-body {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .profile .skill-items {
+    padding-top: 1rem;
+    padding-left: 0;
+    border-top: 1px solid #ddd9d4;
+    border-left: 0;
+  }
+
+  .skill-icons img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .profile .skill-keywords {
+    line-height: 1.6;
+  }
+}
