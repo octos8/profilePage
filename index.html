@@ -25,7 +25,7 @@
         <div class="container header-inner">
             <nav class="site-nav" aria-label="주요 메뉴">
                 <ul class="nav-list">
-                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#home">HOME</a></li>
                     <li><a href="#profile">PROFILE</a></li>
                     <li><a href="#visual-works">VISUAL WORKS</a></li>
                     <li><a href="#web-projects">WEB PROJECTS</a></li>
@@ -198,10 +198,6 @@
                             Figma로 화면을 설계하고, Photoshop과 Illustrator로 시각 요소를 제작하며,<br>
                             HTML/CSS/JavaScript를 통해 실제 웹 화면으로 구현할 수 있습니다.
                         </p>
-
-                        <a class="profile-about-link" href="#about">
-                            ABOUT ME <span aria-hidden="true">→</span>
-                        </a>
                     </div>
 
                     <div class="profile-images">
@@ -210,7 +206,7 @@
                         </p>
 
                         <figure class="profile-image profile-image-main">
-                            <img src="./img/ham.jpg" alt="함국주 증명사진">
+                            <img src="./img/ham.jpdg" alt="함국주 증명사진">
                         </figure>
 
                         <figure class="profile-image profile-image-detail">
@@ -236,13 +232,6 @@
                                 <img src="./img/photoshop.svg" alt="Photoshop">
                                 <img src="./img/illustrator.svg" alt="Illustrator">
                             </div>
-
-                            <ul class="skill-items">
-                                <li>브랜드가 가진 이야기를 시각적으로 정리하고, 사용자가 쉽게 이해하고 오래 기억할 수 있는 디자인을 만듭니다.</li>
-                                <li>사용자의 시선에서 문제를 바라보고, 정보와 감성을 조화롭게 구성하여 명확한 디자인 경험을 만들어갑니다.</li>
-                                <li>기획부터 시각화까지 하나의 흐름으로 연결하여 브랜드의 메시지를 효과적으로 전달하는 디자인을 만듭니다.</li>
-                                <li>BRAND EXPERIENCE</li>
-                            </ul>
                         </div>
 
                         <p class="skill-keywords">UI&nbsp;&nbsp;/&nbsp;&nbsp;GRAPHIC&nbsp;&nbsp;/&nbsp;&nbsp;VISUAL</p>
@@ -264,13 +253,6 @@
                                 <img src="./img/css3.svg" alt="CSS3">
                                 <img src="./img/responsive.svg" alt="Responsive Web">
                             </div>
-
-                            <ul class="skill-items">
-                                <li>HTML5 / CSS3</li>
-                                <li>RESPONSIVE WEB</li>
-                                <li>FLEX / GRID</li>
-                                <li>WEB INTERACTION</li>
-                            </ul>
                         </div>
 
                         <p class="skill-keywords">PC&nbsp;&nbsp;/&nbsp;&nbsp;TABLET&nbsp;&nbsp;/&nbsp;&nbsp;MOBILE</p>
@@ -292,18 +274,32 @@
                                 <img src="./img/git.svg" alt="Git">
                                 <img src="./img/github.svg" alt="GitHub">
                             </div>
-
-                            <ul class="skill-items">
-                                <li>JAVASCRIPT</li>
-                                <li>GIT / GITHUB</li>
-                                <li>GITHUB PAGES</li>
-                                <li>BASIC SEO</li>
-                                <li>DESIGN TO CODE</li>
-                            </ul>
                         </div>
 
                         <p class="skill-keywords">
                             CODE&nbsp;&nbsp;/&nbsp;&nbsp;DEPLOY&nbsp;&nbsp;/&nbsp;&nbsp;COLLABORATION</p>
+                    </section>
+
+                    <section class="skill-card certificate-card" aria-labelledby="certificate-title">
+                        <div class="skill-card-head">
+                            <div>
+                                <span class="skill-number">04</span>
+                                <h3 id="certificate-title">CERTIFICATIONS</h3>
+                                <p>자격증 및 취득 내역</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-body certificate-card-body">
+                            <!-- 아래 항목을 실제 자격증 정보로 수정하세요. 항목을 복사하면 자격증을 추가할 수 있습니다. -->
+                            <div class="certificate-item">
+                                <h4>자격증</h4>
+                                <p>웹디자인개발기능사<span aria-hidden="true">/</span> 취득일 2026.10.02</p>
+                                <p>GTQI 그래픽기술자격 일러스트 1급<span aria-hidden="true">/</span> 취득일 2026.04.17</p>
+                                <p>GTQ 그래픽기술자격 1급<span aria-hidden="true">/</span> 취득일 2025.11.14</p>
+                                <p>웹디자인개발기능사<span aria-hidden="true">/</span> 취득일 2026.10.02</p>
+                                <p>웹디자인개발기능사<span aria-hidden="true">/</span> 취득일 2026.10.02</p>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -333,7 +329,10 @@
                 <!-- 선택한 작품 미리보기 -->
                 <article class="design-work-preview" aria-live="polite">
                     <div class="design-work-preview-media">
-                        <img id="designPreviewImage" src="./img/profile-workspace.jpg" alt="UI Design 작업 미리보기">
+                        <div class="design-preview-track" id="designPreviewTrack" tabindex="0" role="region" aria-label="작품 이미지 슬라이드">
+                            <img id="designPreviewImage" src="./img/profile-workspace.jpg" alt="UI Design 작업 미리보기">
+                        </div>
+                        <div class="design-preview-pagination" role="group" aria-label="이미지 페이지 선택" hidden></div>
                     </div>
 
                     <div class="design-work-preview-info">
@@ -359,41 +358,30 @@
 
                     <!-- 원 가운데 선택된 카테고리 -->
                     <div class="design-orbit-center" id="designOrbitCenter" aria-live="polite">
-                        Publishing
+                        Design
                     </div>
 
 
-                    <!-- UI DESIGN -->
-                    <button class="design-orbit-item orbit-ui" type="button" data-center="UI Design"
-                        data-category="UI DESIGN" data-title="UI / UX Design"
-                        data-description="사용자 경험과 정보 구조를 고려한 웹 인터페이스 디자인입니다." data-image="./img/ui-design.jpg"
+                    <!-- PRODUCT DETAIL PAGE -->
+                    <button class="design-orbit-item orbit-ui" type="button" data-center="PRODUCT DETAIL PAGE"
+                        data-category="PRODUCT DETAIL PAGE" data-title="PRODUCT DETAIL PAGE"
                         data-target="#visual-works">
-                        UI Design
+                        Product Detail Page
                     </button>
 
 
-                    <!-- PUBLISHING -->
-                    <button class="design-orbit-item orbit-publishing is-active" type="button" data-center="Publishing"
-                        data-category="PUBLISHING" data-title="Web Publishing"
-                        data-description="HTML, CSS, JavaScript를 활용해 반응형 웹 화면을 구현합니다."
-                        data-image="./img/profile-workspace.jpg" data-target="#web-projects">
-                        Publishing
+                    <!-- BENNER DESIGN -->
+                    <button class="design-orbit-item orbit-publishing is-active" type="button" data-center="Banner Design"
+                        data-category="PUBLISHING" data-title="Banner Design"
+                        data-images='["./img/Johnnie Walker-be.jpg", "./img/bulgari-be.jpg", "./img/medicube-be.jpg", "./img/musinsa-be.jpg"]'>
+                        Banner Design
                     </button>
-
-
-                    <!-- BRANDING -->
-                    <button class="design-orbit-item orbit-branding" type="button" data-center="Branding"
-                        data-category="BRANDING" data-title="Branding Design"
-                        data-description="브랜드의 메시지와 이미지를 일관된 시각 언어로 구성합니다." data-image="./img/branding.jpg"
-                        data-target="#visual-works">
-                        Branding
-                    </button>
-
 
                     <!-- POPUPS -->
                     <button class="design-orbit-item orbit-popup" type="button" data-center="Popups"
                         data-category="POPUP DESIGN" data-title="Popup Design"
-                        data-description="짧은 순간에도 메시지가 명확하게 전달되는 프로모션 디자인입니다." data-image="./img/popup.jpg"
+                        data-description="짧은 순간에도 메시지가 명확하게 전달되는 프로모션 디자인입니다."
+                        data-images='["./img/oliveyoung-po.jpg", "./img/kfc-po.jpg", "./img/nike-po.jpg", "./img/netflix-po.jpg", "./img/TWOSOME PLACE-po.jpg"]'
                         data-target="#visual-works">
                         Popups
                     </button>
@@ -402,29 +390,11 @@
                     <!-- POSTERS -->
                     <button class="design-orbit-item orbit-poster" type="button" data-center="Posters"
                         data-category="POSTER DESIGN" data-title="Poster Design"
-                        data-description="타이포그래피와 이미지를 활용해 시선을 끄는 비주얼을 제작합니다." data-image="./img/poster.jpg"
+                        data-description="타이포그래피와 이미지를 활용해 시선을 끄는 비주얼을 제작합니다."
+                        data-images='["./img/sony-ps.jpg", "./img/vans-ps.jpg", "./img/wepink-ps.jpg", "./img/ikea-ps.jpg"]'
                         data-target="#visual-works">
                         Posters
                     </button>
-
-
-                    <!-- DETAIL PAGES -->
-                    <button class="design-orbit-item orbit-detail" type="button" data-center="Detail Pages"
-                        data-category="DETAIL PAGE" data-title="Detail Pages"
-                        data-description="제품의 특징과 장점을 구조적으로 전달하는 상세페이지 디자인입니다." data-image="./img/detail-page.jpg"
-                        data-target="#visual-works">
-                        Detail Pages
-                    </button>
-
-
-                    <!-- PROJECTS -->
-                    <button class="design-orbit-item orbit-projects" type="button" data-center="Projects"
-                        data-category="PROJECTS" data-title="Web Projects"
-                        data-description="기획, 디자인, 퍼블리싱까지 진행한 웹 프로젝트를 소개합니다." data-image="./img/projects.jpg"
-                        data-target="#web-projects">
-                        Projects
-                    </button>
-
                 </nav>
             </div>
         </section>
