@@ -22,7 +22,7 @@
 
 #visual-works .section-label {
   margin-bottom: 22px;
-  color: #6d6d6d;
+  color: #ff481f;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.42em;
@@ -45,6 +45,16 @@
   line-height: 1.6;
 }
 
+.visual-explore-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.visual-explore-actions .visual-explore-link {
+  margin-top: 0;
+}
 .visual-explore-link {
   display: inline-flex;
   align-items: center;
@@ -157,6 +167,7 @@
 }
 
 .visual-pc-frame {
+  display: block;
   position: relative;
   padding: 10px 10px 14px;
   border-radius: 18px;
@@ -488,4 +499,9 @@
     .visual-preview-screen::after {
         transition: none !important;
     }
+}
+
+.visual-explore-link:focus-visible {
+  outline: 3px solid #ff481f;
+  outline-offset: 5px;
 }

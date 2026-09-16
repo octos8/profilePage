@@ -88,6 +88,13 @@
     ========================================================= */
 
     function changeWebsite(url) {
+        const homepageLink = section.querySelector('#visual-homepage-link');
+        if (homepageLink) {
+            const label = isPersonal ? '개인 홈페이지 보기' : '팀 홈페이지 보기';
+            homepageLink.href = url;
+            homepageLink.setAttribute('aria-label', `${label} (새 탭)`);
+            homepageLink.querySelector('span').textContent = label;
+        }
         previewFrames.forEach(
             (iframe) => {
                 const screen = iframe.closest('.visual-preview-screen');

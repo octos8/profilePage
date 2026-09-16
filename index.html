@@ -12,33 +12,33 @@
     <link rel="stylesheet" href="./css/intro.css">
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/visual-works.css">
-    <link rel="stylesheet" href="./css/web-projects.css">
+    <link rel="stylesheet" href="./css/product-page.css">
     <script src="./js/visual-works.js" defer></script>
-    <script src="./js/web-projects.js" defer></script>
+    <script src="./js/product-page.js" defer></script>
     <script src="./js/index.js" defer></script>
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <nav class="site-nav" aria-label="주요 메뉴">
-                <ul class="nav-list">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#profile">PROFILE</a></li>
-                    <li><a href="#visual-works">VISUAL WORKS</a></li>
-                    <li><a href="#web-projects">WEB PROJECTS</a></li>
-                </ul>
-            </nav>
-
-            <!-- LET’S TALK 링크는 실제 연락처가 정해지면 추가합니다. -->
-        </div>
-
-    </header>
     <main id="main-content">
         <div class="intro-scroll">
             <div class="intro-sticky">
+                <header class="site-header">
+                    <div class="container header-inner">
+                        <nav class="site-nav" aria-label="주요 메뉴">
+                            <ul class="nav-list">
+                                <li><a href="#about">HOME</a></li>
+                                <li><a href="#profile">PROFILE</a></li>
+                                <li><a href="#visual-works">VISUAL WORKS</a></li>
+                                <li><a href="#product-page">PRODUCT PAGE</a></li>
+                            </ul>
+                        </nav>
+
+                        <!-- LET’S TALK 링크는 실제 연락처가 정해지면 추가합니다. -->
+                    </div>
+
+                </header>
                 <section id="about" class="hero" aria-labelledby="hero-title">
                     <!-- 배경 장식: 스크린리더에서는 읽지 않습니다. -->
                     <div class="hero-decoration" aria-hidden="true">
@@ -87,7 +87,7 @@
                     <div class="container work-preview-inner">
 
                         <p class="work-note work-note-left" aria-hidden="true">Ideas<br>into<br>Experiences</p>
-                        <p class="work-note work-note-top" aria-hidden="true">Design<br>for a brighter<br>tomorrow</p>
+                        <p class="work-note work-note-top" aria-hidden="true">Design<br>For a Brighter<br>Tomorrow</p>
                         <p class="work-note work-note-middle" aria-hidden="true">Small<br>Details<br>Big Impact</p>
                         <p class="work-note work-note-right" aria-hidden="true">More<br>Human<br>Stories</p>
                         <p class="work-note work-note-bottom" aria-hidden="true">Ideas<br>Travel<br>Further</p>
@@ -244,7 +244,7 @@
                                 <h3 id="publishing-skill-title">PUBLISHING</h3>
                                 <p>디자인을 실제 경험할 수 있는 웹 화면으로 구현합니다.</p>
                             </div>
-                            <a class="skill-arrow" href="#web-projects" aria-label="퍼블리싱 작업 보기">↗</a>
+                            <a class="skill-arrow" href="#product-page" aria-label="퍼블리싱 작업 보기">↗</a>
                         </div>
 
                         <div class="skill-card-body">
@@ -265,7 +265,7 @@
                                 <h3 id="workflow-skill-title">DEVELOPMENT &amp; WORKFLOW</h3>
                                 <p>더 나은 결과를 위해 효율적인 협업과 개발 환경을 구축합니다.</p>
                             </div>
-                            <a class="skill-arrow" href="#web-projects" aria-label="개발 작업 보기">↗</a>
+                            <a class="skill-arrow" href="#product-page" aria-label="개발 작업 보기">↗</a>
                         </div>
 
                         <div class="skill-card-body">
@@ -296,8 +296,9 @@
                                 <p>웹디자인개발기능사<span aria-hidden="true">/</span> 취득일 2026.10.02</p>
                                 <p>GTQI 그래픽기술자격 일러스트 1급<span aria-hidden="true">/</span> 취득일 2026.04.17</p>
                                 <p>GTQ 그래픽기술자격 1급<span aria-hidden="true">/</span> 취득일 2025.11.14</p>
-                                <p>웹디자인개발기능사<span aria-hidden="true">/</span> 취득일 2026.10.02</p>
-                                <p>웹디자인개발기능사<span aria-hidden="true">/</span> 취득일 2026.10.02</p>
+                                <p>컴퓨터활용능력 2급<span aria-hidden="true">/</span> 취득일 2018.06.22</p>
+                                <p>국가공인 한자자격시험 2급<span aria-hidden="true">/</span> 취득일 2017.06.22</p>
+                                <p>워드프로세서<span aria-hidden="true">/</span> 취득일 2017.03.17</p>
                             </div>
                         </div>
                     </section>
@@ -310,6 +311,7 @@
 
             <div class="container design-banner-inner">
                 <div class="design-banner-content">
+                    <p class="section-label">DESIGN &amp; PUBLISHING</p>
                     <h2 id="design-banner-title" lang="en">
                         Creative ideas<br>
                         grow through<br>
@@ -329,7 +331,8 @@
                 <!-- 선택한 작품 미리보기 -->
                 <article class="design-work-preview" aria-live="polite">
                     <div class="design-work-preview-media">
-                        <div class="design-preview-track" id="designPreviewTrack" tabindex="0" role="region" aria-label="작품 이미지 슬라이드">
+                        <div class="design-preview-track" id="designPreviewTrack" tabindex="0" role="region"
+                            aria-label="작품 이미지 슬라이드">
                             <img id="designPreviewImage" src="./img/profile-workspace.jpg" alt="UI Design 작업 미리보기">
                         </div>
                         <div class="design-preview-pagination" role="group" aria-label="이미지 페이지 선택" hidden></div>
@@ -362,17 +365,9 @@
                     </div>
 
 
-                    <!-- PRODUCT DETAIL PAGE -->
-                    <button class="design-orbit-item orbit-ui" type="button" data-center="PRODUCT DETAIL PAGE"
-                        data-category="PRODUCT DETAIL PAGE" data-title="PRODUCT DETAIL PAGE"
-                        data-target="#visual-works">
-                        Product Detail Page
-                    </button>
-
-
                     <!-- BENNER DESIGN -->
-                    <button class="design-orbit-item orbit-publishing is-active" type="button" data-center="Banner Design"
-                        data-category="PUBLISHING" data-title="Banner Design"
+                    <button class="design-orbit-item orbit-publishing is-active" type="button"
+                        data-center="Banner Design" data-category="PUBLISHING" data-title="Banner Design"
                         data-images='["./img/Johnnie Walker-be.jpg", "./img/bulgari-be.jpg", "./img/medicube-be.jpg", "./img/musinsa-be.jpg"]'>
                         Banner Design
                     </button>
@@ -399,93 +394,98 @@
             </div>
         </section>
         <section id="visual-works" class="visual-works" aria-labelledby="visual-works-title">
-          <div class="container visual-works-inner">
-            <header class="section-heading">
-              <p class="section-label">DESIGN ARCHIVE</p>
-              <h2 id="visual-works-title" lang="en">Curate, organize, and present creative work</h2>
-              <p class="section-description" lang="en">
-                Designing visual stories, building digital experiences,
-                and collecting ideas that inspire.
-              </p>
-              <a href="#visual-works" class="visual-explore-link" id="visual-explore-link">
-                <span class="visual-explore-text">개인 포트폴리오</span>
-                <span class="visual-explore-arrow" aria-hidden="true">→</span>
-              </a>
-            </header>
-
-            <div class="visual-works-gallery">
-              <article class="visual-device visual-device-pc">
-                <span class="visual-device-label">PC</span>
-                <div class="visual-pc-frame">
-                  <div class="visual-pc-screen visual-preview-screen">
-                    <iframe
-                      class="visual-site-frame"
-                      data-device="pc"
-                      data-width="1920"
-                      data-height="1000"
-                      title="PC 홈페이지 미리보기"
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                </div>
-                <div class="visual-pc-stand" aria-hidden="true"></div>
-                <div class="visual-pc-base" aria-hidden="true"></div>
-              </article>
-
-              <article class="visual-device visual-device-pad">
-                <span class="visual-device-label">PAD</span>
-                <div class="visual-pad-frame">
-                  <div class="visual-pad-screen visual-preview-screen">
-                    <iframe
-                      class="visual-site-frame"
-                      data-device="pad"
-                      data-width="1024"
-                      data-height="768"
-                      title="태블릿 홈페이지 미리보기"
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                </div>
-              </article>
-
-              <article class="visual-device visual-device-mo">
-                <span class="visual-device-label">MO</span>
-                <div class="visual-mo-frame">
-                  <div class="visual-mo-screen visual-preview-screen">
-                    <iframe
-                      class="visual-site-frame"
-                      data-device="mo"
-                      data-width="390"
-                      data-height="844"
-                      title="모바일 홈페이지 미리보기"
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section id="web-projects" class="web-projects" aria-labelledby="web-projects-title">
-            <div class="container web-projects-inner">
+            <div class="container visual-works-inner">
                 <header class="section-heading">
-                    <p class="section-label">
-                        IDEAS × DESIGN × REAL IMPACT
+                    <p class="section-label">DESIGN ARCHIVE</p>
+                    <h2 id="visual-works-title" lang="en">Curate, organize, and present creative work</h2>
+                    <p class="section-description" lang="en">
+                        Designing visual stories, building digital experiences,
+                        and collecting ideas that inspire.
                     </p>
-
-                    <h2 id="web-projects-title" lang="en">
-                        Creative work grows with ideas
-                    </h2>
+                    <div class="visual-explore-actions">
+                        <a class="visual-explore-link" id="visual-homepage-link" href="https://octos8.github.io/Aesop-projects/" target="_blank"
+                            rel="noopener noreferrer" aria-label="팀 홈페이지 보기 (새 탭)">
+                            <span>팀 홈페이지 보기</span>
+                            <span class="visual-explore-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a href="#visual-works" class="visual-explore-link" id="visual-explore-link">
+                            <span class="visual-explore-text">개인 포트폴리오</span>
+                            <span class="visual-explore-arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
                 </header>
 
-                <div class="web-projects-gallery">
-                    <!-- 작업 장면, 모바일 화면, Figma 화면 등의 콜라주 이미지 -->
-                </div>
+                <div class="visual-works-gallery">
+                    <article class="visual-device visual-device-pc">
+                        <span class="visual-device-label">PC</span>
+                        <div class="visual-pc-frame">
+                            <div class="visual-pc-screen visual-preview-screen">
+                                <iframe class="visual-site-frame" data-device="pc" data-width="1920" data-height="1000"
+                                    title="PC 홈페이지 미리보기" tabindex="-1" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="visual-pc-stand" aria-hidden="true"></div>
+                        <div class="visual-pc-base" aria-hidden="true"></div>
+                    </article>
 
-                <!-- VIEW PROJECTS 링크는 실제 프로젝트 목록 주소 확정 후 추가합니다. -->
+                    <article class="visual-device visual-device-pad">
+                        <span class="visual-device-label">PAD</span>
+                        <div class="visual-pad-frame">
+                            <div class="visual-pad-screen visual-preview-screen">
+                                <iframe class="visual-site-frame" data-device="pad" data-width="1024" data-height="768"
+                                    title="태블릿 홈페이지 미리보기" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="visual-device visual-device-mo">
+                        <span class="visual-device-label">MO</span>
+                        <div class="visual-mo-frame">
+                            <div class="visual-mo-screen visual-preview-screen">
+                                <iframe class="visual-site-frame" data-device="mo" data-width="390" data-height="844"
+                                    title="모바일 홈페이지 미리보기" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
+        <section id="product-page" class="product-page" aria-labelledby="product-page-title">
+            <div class="container product-page-inner">
+                <header class="section-heading">
+                    <p class="section-label">PRODUCT PAGE DESIGN</p>
+                    <h2 id="product-page-title" lang="en">Product pages</h2>
+                    <p class="product-page-description">이미지를 클릭하면 상세페이지 전체를 볼 수 있습니다.</p>
+                </header>
+                <div class="product-page-gallery">
+                    <!-- 각 카드의 href와 img src를 상세페이지 이미지 경로로 변경하세요. -->
+                    <a class="product-page-card" href="./img/HEADPHONES.jpg" data-title="HEADPHONES 상세페이지" aria-haspopup="dialog">
+                        <div class="product-page-thumbnail"><img src="./img/HEADPHONES.jpg" alt="ARC-01 미리보기" loading="lazy"></div>
+                        <div class="product-page-card-info"><span><small>01 / PRODUCT DESIGN</small><strong>NOVERA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                    </a>
+                    <a class="product-page-card" href="./img/lotion.jpg" data-title="medicube 상세페이지" aria-haspopup="dialog">
+                        <div class="product-page-thumbnail"><img src="./img/lotion.jpg" alt="LONE 상세페이지 미리보기" loading="lazy"></div>
+                        <div class="product-page-card-info"><span><small>02 / PRODUCT DESIGN</small><strong>LONE</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                    </a>
+                    <a class="product-page-card" href="./img/musinsa-be.jpg" data-title="MUSINSA 상세페이지" aria-haspopup="dialog">
+                        <div class="product-page-thumbnail"><img src="./img/musinsa-be.jpg" alt="무신사 상세페이지 미리보기" loading="lazy"></div>
+                        <div class="product-page-card-info"><span><small>03 / PRODUCT DESIGN</small><strong>MUSINSA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                    </a>
+                </div>
+            </div>
+            <dialog class="product-page-dialog" aria-labelledby="product-page-dialog-title">
+                <div class="product-page-dialog-header">
+                    <h3 id="product-page-dialog-title">상세페이지</h3>
+                    <form method="dialog"><button class="product-page-close" type="submit" autofocus aria-label="상세페이지 닫기">닫기 ×</button></form>
+                </div>
+                <div class="product-page-dialog-content"><img class="product-page-full-image" alt=""></div>
+            </dialog>
+        </section>
     </main>
+    <button class="back-to-top" type="button" aria-label="페이지 맨 위로 이동">
+        <span class="back-to-top-arrow" aria-hidden="true">↑</span>
+        <span aria-hidden="true">TOP</span>
+    </button>
 </body>
 
 </html>
