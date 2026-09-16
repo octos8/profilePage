@@ -1,4 +1,12 @@
 /* 상단 메뉴 */
+.intro-sticky > .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: transparent;
+}
 .header-inner {
   display: flex;
   align-items: center;
