@@ -395,6 +395,37 @@
                 </nav>
             </div>
         </section>
+        <section id="product-page" class="product-page" aria-labelledby="product-page-title">
+                <div class="container product-page-inner">
+                    <header class="section-heading">
+                        <p class="section-label">PRODUCT PAGE DESIGN</p>
+                        <h2 id="product-page-title" lang="en">PRODUCT PAGES</h2>
+                        <p class="product-page-description">이미지를 클릭하면 상세페이지 전체를 볼 수 있습니다.</p>
+                    </header>
+                    <div class="product-page-gallery">
+                        <!-- 각 카드의 href와 img src를 상세페이지 이미지 경로로 변경하세요. -->
+                        <a class="product-page-card" href="./img/HEADPHONES.jpg" data-title="HEADPHONES 상세페이지" aria-haspopup="dialog">
+                            <div class="product-page-thumbnail"><img src="./img/HEADPHONES.jpg" alt="ARC-01 미리보기" loading="lazy"></div>
+                            <div class="product-page-card-info"><span><small>01 / PRODUCT DESIGN</small><strong>NOVERA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                        </a>
+                        <a class="product-page-card" href="./img/lotion.jpg" data-title="medicube 상세페이지" aria-haspopup="dialog">
+                            <div class="product-page-thumbnail"><img src="./img/lotion.jpg" alt="LONE 상세페이지 미리보기" loading="lazy"></div>
+                            <div class="product-page-card-info"><span><small>02 / PRODUCT DESIGN</small><strong>LONE</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                        </a>
+                        <a class="product-page-card" href="./img/musinsa-be.jpg" data-title="MUSINSA 상세페이지" aria-haspopup="dialog">
+                            <div class="product-page-thumbnail"><img src="./img/musinsa-be.jpg" alt="무신사 상세페이지 미리보기" loading="lazy"></div>
+                            <div class="product-page-card-info"><span><small>03 / PRODUCT DESIGN</small><strong>MUSINSA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                        </a>
+                    </div>
+                </div>
+                <dialog class="product-page-dialog" aria-labelledby="product-page-dialog-title">
+                    <div class="product-page-dialog-header">
+                        <h3 id="product-page-dialog-title">상세페이지</h3>
+                        <form method="dialog"><button class="product-page-close" type="submit" autofocus aria-label="상세페이지 닫기">닫기 ×</button></form>
+                    </div>
+                    <div class="product-page-dialog-content"><img class="product-page-full-image" alt=""></div>
+                </dialog>
+            </section>
         <section id="visual-works" class="visual-works" aria-labelledby="visual-works-title">
             <div class="container visual-works-inner">
                 <header class="section-heading">
@@ -451,37 +482,7 @@
                     </article>
                 </div>
             </div>
-        </section>
-        <section id="product-page" class="product-page" aria-labelledby="product-page-title">
-            <div class="container product-page-inner">
-                <header class="section-heading">
-                    <p class="section-label">PRODUCT PAGE DESIGN</p>
-                    <h2 id="product-page-title" lang="en">PRODUCT PAGES</h2>
-                    <p class="product-page-description">이미지를 클릭하면 상세페이지 전체를 볼 수 있습니다.</p>
-                </header>
-                <div class="product-page-gallery">
-                    <!-- 각 카드의 href와 img src를 상세페이지 이미지 경로로 변경하세요. -->
-                    <a class="product-page-card" href="./img/HEADPHONES.jpg" data-title="HEADPHONES 상세페이지" aria-haspopup="dialog">
-                        <div class="product-page-thumbnail"><img src="./img/HEADPHONES.jpg" alt="ARC-01 미리보기" loading="lazy"></div>
-                        <div class="product-page-card-info"><span><small>01 / PRODUCT DESIGN</small><strong>NOVERA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
-                    </a>
-                    <a class="product-page-card" href="./img/lotion.jpg" data-title="medicube 상세페이지" aria-haspopup="dialog">
-                        <div class="product-page-thumbnail"><img src="./img/lotion.jpg" alt="LONE 상세페이지 미리보기" loading="lazy"></div>
-                        <div class="product-page-card-info"><span><small>02 / PRODUCT DESIGN</small><strong>LONE</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
-                    </a>
-                    <a class="product-page-card" href="./img/musinsa-be.jpg" data-title="MUSINSA 상세페이지" aria-haspopup="dialog">
-                        <div class="product-page-thumbnail"><img src="./img/musinsa-be.jpg" alt="무신사 상세페이지 미리보기" loading="lazy"></div>
-                        <div class="product-page-card-info"><span><small>03 / PRODUCT DESIGN</small><strong>MUSINSA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
-                    </a>
-                </div>
-            </div>
-            <dialog class="product-page-dialog" aria-labelledby="product-page-dialog-title">
-                <div class="product-page-dialog-header">
-                    <h3 id="product-page-dialog-title">상세페이지</h3>
-                    <form method="dialog"><button class="product-page-close" type="submit" autofocus aria-label="상세페이지 닫기">닫기 ×</button></form>
-                </div>
-                <div class="product-page-dialog-content"><img class="product-page-full-image" alt=""></div>
-            </dialog>
+            
         </section>
     </main>
     <button class="back-to-top" type="button" aria-label="페이지 맨 위로 이동">
