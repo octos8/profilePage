@@ -36,17 +36,17 @@ html {
     scroll-behavior: auto;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   html {
     font-size: var(--font-size-pad);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   html {
     font-size: var(--font-size-mo);
   }
 }
-@media (max-width: 402px) {
+@media (max-width: 25.125rem) {
   html {
     font-size: 0.75rem;
   }

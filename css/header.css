@@ -53,7 +53,7 @@ html { scroll-padding-top: 100px; }
 .nav-list a:hover {
   color: var(--color-accent);
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .header-inner {
     min-height: 4.5rem;
   }
@@ -64,7 +64,7 @@ html { scroll-padding-top: 100px; }
     font-size: 0.75rem;
   }
 }
-@media (max-width: 402px) {
+@media (max-width: 25.125rem) {
   .header-inner {
     min-height: 4rem;
   }

@@ -55,7 +55,7 @@
   const hero = intro?.querySelector('.hero');
   const works = intro?.querySelector('.work-preview');
   if (!intro || !stage || !hero || !works) return;
-  const simpleView = window.matchMedia('(prefers-reduced-motion: reduce), (max-height: 650px)');
+  const simpleView = window.matchMedia('(prefers-reduced-motion: reduce), (max-height: 40.625rem)');
   const clamp = (value) => Math.min(1, Math.max(0, value));
   const phase = (progress, start, end) => clamp((progress - start) / (end - start));
   let framePending = false;
@@ -124,6 +124,13 @@
       button.setAttribute('aria-expanded', String(panel.classList.contains('is-active')));
       button.addEventListener('click', () => {
         activatePanel(panel);
+        if (window.matchMedia('(max-width: 64rem)').matches) {
+          const left = accordion.scrollLeft + panel.getBoundingClientRect().left - accordion.getBoundingClientRect().left;
+          accordion.scrollTo({
+            left,
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+          });
+        }
       });
       button.addEventListener('mouseenter', () => {
         if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {

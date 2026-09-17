@@ -603,7 +603,7 @@
   color: #fff;
   font-weight: 500;
 }
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   .work-preview {
     align-items: start;
     padding-block: 4rem;
@@ -661,7 +661,7 @@
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .intro-scroll:not(.is-ready) .work-preview {
     padding-block: 4rem;
   }
@@ -705,7 +705,7 @@
     aspect-ratio: 1.4;
   }
 }
-@media (max-width: 402px) {
+@media (max-width: 25.125rem) {
   .work-preview {
     padding-block: 3rem 2.5rem;
   }
@@ -738,7 +738,7 @@
     width: 82%;
   }
 }
-@media (prefers-reduced-motion: reduce), (max-height: 650px) {
+@media (prefers-reduced-motion: reduce), (max-height: 40.625rem) {
   .intro-scroll {
     height: auto !important;
   }
