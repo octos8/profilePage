@@ -1,4 +1,21 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  --font-family-main: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
   --color-background: #fffdf9;
   --color-text: #111315;
   --color-accent: #ff3b30;
@@ -11,6 +28,13 @@
 }
 html {
   font-size: var(--font-size-pc);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 @media (max-width: 1024px) {
   html {
@@ -34,11 +58,15 @@ body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: Arial, "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-family: var(--font-family-main);
   line-height: 1.6;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+button, input, textarea, select {
+  font-family: inherit;
+}
+
 h1, h2, h3, p, figure {
   margin: 0;
 }

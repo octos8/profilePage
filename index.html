@@ -20,25 +20,29 @@
 
 <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="header-navigation" hidden>
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+            <nav id="header-navigation" class="site-nav" aria-label="주요 메뉴">
+                <ul class="nav-list">
+                    <li><a href="#about">HOME</a></li>
+                    <li><a href="#profile">PROFILE</a></li>
+                    <li><a href="#design-banner">DESIGN CATEGORY</a></li>
+                    <li><a href="#product-page">PRODUCT PAGE</a></li>
+                    <li><a href="#visual-works">PROJECT PAGE</a></li>
+                </ul>
+            </nav>
 
+            <!-- LET’S TALK 링크는 실제 연락처가 정해지면 추가합니다. -->
+        </div>
+
+    </header>
     <main id="main-content">
         <div class="intro-scroll">
             <div class="intro-sticky">
-                <header class="site-header">
-                    <div class="container header-inner">
-                        <nav class="site-nav" aria-label="주요 메뉴">
-                            <ul class="nav-list">
-                                <li><a href="#about">HOME</a></li>
-                                <li><a href="#profile">PROFILE</a></li>
-                                <li><a href="#visual-works">VISUAL WORKS</a></li>
-                                <li><a href="#product-page">PRODUCT PAGE</a></li>
-                            </ul>
-                        </nav>
 
-                        <!-- LET’S TALK 링크는 실제 연락처가 정해지면 추가합니다. -->
-                    </div>
-
-                </header>
                 <section id="about" class="hero" aria-labelledby="hero-title">
                     <!-- 배경 장식: 스크린리더에서는 읽지 않습니다. -->
                     <div class="hero-decoration" aria-hidden="true">
@@ -77,10 +81,6 @@
                         <p class="hero-description">
                             디자인의 기본에서 좋은 화면이 시작된다고 생각합니다.
                         </p>
-
-                        <a class="hero-link" href="#work-preview">
-                            VIEW WORK
-                        </a>
                     </div>
                 </section>
                 <section id="work-preview" class="work-preview" aria-labelledby="work-preview-title">
@@ -274,7 +274,7 @@
                                 <img src="./img/git.svg" alt="Git">
                                 <img src="./img/github.svg" alt="GitHub">
                                 <img src="./img/notion.svg" alt="notion">
-                                
+
                             </div>
                         </div>
 
@@ -307,7 +307,7 @@
                 </div>
             </div>
         </section>
-        <section class="design-banner" aria-labelledby="design-banner-title">
+        <section id="design-banner" class="design-banner" aria-labelledby="design-banner-title">
             <div class="design-banner-bg" aria-hidden="true"></div>
             <div class="design-banner-overlay" aria-hidden="true"></div>
 
@@ -324,10 +324,6 @@
                         From visual design to publishing,<br>
                         I build clear and engaging digital experiences.
                     </p>
-
-                    <a class="section-link" href="#visual-works">
-                        GET STARTED <span aria-hidden="true">→</span>
-                    </a>
                 </div>
 
                 <!-- 선택한 작품 미리보기 -->
@@ -360,13 +356,6 @@
                     <!-- 원형 라인 -->
                     <div class="design-orbit-circle" aria-hidden="true"></div>
 
-
-                    <!-- 원 가운데 선택된 카테고리 -->
-                    <div class="design-orbit-center" id="designOrbitCenter" aria-live="polite">
-                        Design
-                    </div>
-
-
                     <!-- BENNER DESIGN -->
                     <button class="design-orbit-item orbit-publishing is-active" type="button"
                         data-center="Banner Design" data-category="PUBLISHING" data-title="Banner Design"
@@ -396,64 +385,262 @@
             </div>
         </section>
         <section id="product-page" class="product-page" aria-labelledby="product-page-title">
-                <div class="container product-page-inner">
-                    <header class="section-heading">
-                        <p class="section-label">PRODUCT PAGE DESIGN</p>
-                        <h2 id="product-page-title" lang="en">PRODUCT PAGES</h2>
-                        <p class="product-page-description">이미지를 클릭하면 상세페이지 전체를 볼 수 있습니다.</p>
-                    </header>
-                    <div class="product-page-gallery">
-                        <!-- 각 카드의 href와 img src를 상세페이지 이미지 경로로 변경하세요. -->
-                        <a class="product-page-card" href="./img/HEADPHONES.jpg" data-title="HEADPHONES 상세페이지" aria-haspopup="dialog">
-                            <div class="product-page-thumbnail"><img src="./img/HEADPHONES.jpg" alt="ARC-01 미리보기" loading="lazy"></div>
-                            <div class="product-page-card-info"><span><small>01 / PRODUCT DESIGN</small><strong>NOVERA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
-                        </a>
-                        <a class="product-page-card" href="./img/lotion.jpg" data-title="medicube 상세페이지" aria-haspopup="dialog">
-                            <div class="product-page-thumbnail"><img src="./img/lotion.jpg" alt="LONE 상세페이지 미리보기" loading="lazy"></div>
-                            <div class="product-page-card-info"><span><small>02 / PRODUCT DESIGN</small><strong>LONE</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
-                        </a>
-                        <a class="product-page-card" href="./img/musinsa-be.jpg" data-title="MUSINSA 상세페이지" aria-haspopup="dialog">
-                            <div class="product-page-thumbnail"><img src="./img/musinsa-be.jpg" alt="무신사 상세페이지 미리보기" loading="lazy"></div>
-                            <div class="product-page-card-info"><span><small>03 / PRODUCT DESIGN</small><strong>MUSINSA</strong></span><span class="product-page-card-action">상세페이지 보기 ↗</span></div>
-                        </a>
-                    </div>
+            <div class="container product-page-inner">
+                <header class="section-heading">
+                    <p class="section-label">PRODUCT PAGE DESIGN</p>
+                    <h2 id="product-page-title" lang="en">PRODUCT PAGES</h2>
+                    <p class="product-page-description">이미지를 클릭하면 상세페이지 전체를 볼 수 있습니다.</p>
+                </header>
+                <div class="product-page-gallery">
+                    <!-- 각 카드의 href와 img src를 상세페이지 이미지 경로로 변경하세요. -->
+                    <a class="product-page-card" href="./img/HEADPHONES.jpg" data-title="HEADPHONES 상세페이지"
+                        aria-haspopup="dialog">
+                        <div class="product-page-thumbnail"><img src="./img/HEADPHONES.jpg" alt="ARC-01 미리보기"
+                                loading="lazy"></div>
+                        <div class="product-page-card-info"><span><small>01 / PRODUCT
+                                    DESIGN</small><strong>NOVERA</strong></span><span
+                                class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                    </a>
+                    <a class="product-page-card" href="./img/lotion.jpg" data-title="medicube 상세페이지"
+                        aria-haspopup="dialog">
+                        <div class="product-page-thumbnail"><img src="./img/lotion.jpg" alt="LONE 상세페이지 미리보기"
+                                loading="lazy"></div>
+                        <div class="product-page-card-info"><span><small>02 / PRODUCT
+                                    DESIGN</small><strong>LONE</strong></span><span
+                                class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                    </a>
+                    <a class="product-page-card" href="./img/musinsa-be.jpg" data-title="MUSINSA 상세페이지"
+                        aria-haspopup="dialog">
+                        <div class="product-page-thumbnail"><img src="" alt="상세페이지 미리보기"
+                                loading="lazy"></div>
+                        <div class="product-page-card-info"><span><small>03 / PRODUCT
+                                    DESIGN</small><strong>제작 중</strong></span><span
+                                class="product-page-card-action">상세페이지 보기 ↗</span></div>
+                    </a>
                 </div>
-                <dialog class="product-page-dialog" aria-labelledby="product-page-dialog-title">
-                    <div class="product-page-dialog-header">
-                        <h3 id="product-page-dialog-title">상세페이지</h3>
-                        <form method="dialog"><button class="product-page-close" type="submit" autofocus aria-label="상세페이지 닫기">닫기 ×</button></form>
-                    </div>
-                    <div class="product-page-dialog-content"><img class="product-page-full-image" alt=""></div>
-                </dialog>
-            </section>
-        <section id="visual-works" class="visual-works" aria-labelledby="visual-works-title">
+            </div>
+            <dialog class="product-page-dialog" aria-labelledby="product-page-dialog-title">
+                <div class="product-page-dialog-header">
+                    <h3 id="product-page-dialog-title">상세페이지</h3>
+                    <form method="dialog"><button class="product-page-close" type="submit" autofocus
+                            aria-label="상세페이지 닫기">×</button></form>
+                </div>
+                <div class="product-page-dialog-content"><img class="product-page-full-image" alt=""></div>
+            </dialog>
+        </section>
+        <section id="visual-works" class="visual-works" data-project-url="https://octos8.github.io/Aesop-projects/"
+            aria-labelledby="visual-works-title">
             <div class="container visual-works-inner">
                 <header class="section-heading">
-                    <p class="section-label">DESIGN ARCHIVE</p>
-                    <h2 id="visual-works-title" lang="en">CURATE, ORGANIZE, AND PRESENT CREATIVE WORK</h2>
-                    <p class="section-description" lang="en">
-                        Designing visual stories, building digital experiences,
-                        and collecting ideas that inspire.
-                    </p>
-                    <div class="visual-explore-actions">
-                        <a class="visual-explore-link" id="visual-homepage-link" href="https://octos8.github.io/Aesop-projects/" target="_blank"
-                            rel="noopener noreferrer" aria-label="팀 홈페이지 보기 (새 탭)">
-                            <span>팀 홈페이지 보기</span>
-                            <span class="visual-explore-arrow" aria-hidden="true">↗</span>
-                        </a>
-                        <a href="#visual-works" class="visual-explore-link" id="visual-explore-link">
-                            <span class="visual-explore-text">개인 포트폴리오</span>
-                            <span class="visual-explore-arrow" aria-hidden="true">→</span>
-                        </a>
-                    </div>
+                    <p class="section-label">TEAM PROJECT</p>
+                    <h2 id="visual-works-title" lang="en">
+                        <img class="visual-project-logo" src="./img/logo.svg" alt="AESOP" width="254" height="66">
+                    </h2>
                 </header>
+
+                <div class="project-story">
+                    <section class="project-story-intro" aria-labelledby="aesop-overview-title">
+                        <div>
+                            <p class="project-eyebrow">01 / OVERVIEW</p>
+                            <h3 id="aesop-overview-title">브랜드의 분위기를 담고,<br>제품 탐색을 명확하게.</h3>
+                            <p class="project-draft">제작 방향 · 설명 초안</p>
+                            <p>차분한 그린 컬러와 여백을 중심으로 이솝의 제품을 소개하는 웹사이트를 재구성했습니다. 브랜드 이야기와 제품 정보를 구분하고, 다양한 화면에서도 콘텐츠의 흐름이
+                                이어지는 경험을 지향합니다.</p>
+                        </div>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>BRAND INFO</dt>
+                                <dd>이솝은 스킨케어, 헤어케어, 바디케어와 향수 등을 선보이는 브랜드입니다. <a href="https://kr.aesop.com"
+                                        target="_blank" rel="noopener noreferrer">공식 사이트 ↗</a></dd>
+                            </div>
+                            <div>
+                                <dt>PROJECT TYPE</dt>
+                                <dd>
+                                    팀 프로젝트 / 브랜드 웹사이트 리디자인
+                                    <div class="visual-explore-actions">
+                                        <a href="https://octos8.github.io/Aesop-projects/" target="_blank"
+                                            rel="noopener noreferrer">리디자인 홈페이지 사이트 ↗</a>
+                                    </div>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>OUTPUT</dt>
+                                <dd>PC · Tablet · Mobile 반응형 웹</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <section class="project-story-section project-summary-section" aria-labelledby="aesop-role-title">
+                        <p class="project-eyebrow">02 / MY CONTRIBUTION</p>
+                        <h3 id="aesop-role-title">나의 기여도</h3>
+                        <dl class="project-summary-list">
+                            <div>
+                                <dt>기여도</dt>
+                                <dd><span class="project-summary-badge">전체 55%</span><span
+                                        class="project-summary-badge">코딩 80%</span><span
+                                        class="project-summary-badge">디자인 20%</span></dd>
+                            </div>
+                            <div>
+                                <dt>작업기간</dt>
+                                <dd><span class="project-summary-badge">4주</span></dd>
+                            </div>
+                            <div>
+                                <dt>디자인 툴</dt>
+                                <dd><span class="project-summary-badge">Photoshop</span><span
+                                        class="project-summary-badge">Illustrator</span><span
+                                        class="project-summary-badge">Figma</span></dd>
+                            </div>
+                            <div>
+                                <dt>퍼블리싱 언어</dt>
+                                <dd><span class="project-summary-badge">HTML5</span><span
+                                        class="project-summary-badge">CSS3</span><span
+                                        class="project-summary-badge">JAVASCRIPT</span></dd>
+                            </div>
+                            <div>
+                                <dt>플러그인</dt>
+                                <dd><span class="project-summary-badge">Swiper.js</span></dd>
+                            </div>
+                        </dl>
+                        <p class="project-caption">각 수치는 전체 프로젝트 및 해당 작업 영역에서의 기여도를 나타냅니다.</p>
+                    </section>
+
+                    <section class="project-story-section" aria-labelledby="aesop-improvement-title">
+                        <p class="project-eyebrow">03 / PROBLEM &amp; DIRECTION</p>
+                        <h3 id="aesop-improvement-title">문제에서 개선 방향으로</h3>
+                        <div class="project-comparison">
+                            <article><span class="project-card-label">01 / 정보 구조</span>
+                                <h4>제품 탐색의 흐름</h4>
+                                <p><b>문제점 가설</b> 브랜드 콘텐츠와 제품 정보가 함께 노출되어 원하는 제품으로 이동하는 흐름이 분산될 수 있습니다.</p>
+                                <p><b>개선 방향</b> 콘텐츠의 역할을 구분하고 카테고리와 제품 탐색 영역의 우선순위를 명확히 정리합니다.</p>
+                            </article>
+                            <article><span class="project-card-label">02 / 시각적 위계</span>
+                                <h4>읽기 쉬운 제품 정보</h4>
+                                <p><b>문제점 가설</b> 제목, 설명, 행동 버튼의 강조 차이가 작으면 핵심 정보를 빠르게 파악하기 어려울 수 있습니다.</p>
+                                <p><b>개선 방향</b> 제목과 본문의 크기, 굵기, 여백을 체계화하고 주요 버튼의 형태를 일관되게 구성합니다.</p>
+                            </article>
+                            <article><span class="project-card-label">03 / 모바일 경험</span>
+                                <h4>작은 화면에서도 자연스럽게</h4>
+                                <p><b>검토 항목</b> 메뉴, 제품 목록, 구매 영역이 좁은 화면에서도 겹침 없이 읽히고 조작되는지 확인합니다.</p>
+                                <p><b>개선 방향</b> 화면 너비에 따라 콘텐츠 열 수와 여백을 조정하고 구매 영역과 메뉴 배치를 재구성합니다.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="project-story-section" aria-labelledby="aesop-system-title">
+                        <p class="project-eyebrow">04 / DESIGN SYSTEM</p>
+                        <h3 id="aesop-system-title">일관된 화면을 만드는 기준</h3>
+                        <p class="project-caption">프로젝트의 공통 CSS에 정의한 색상, 서체, 간격을 기준으로 정리했습니다.</p>
+                        <h4 class="project-subtitle">Color palette</h4>
+                        <ul class="project-palette" aria-label="프로젝트 색상">
+                            <li><span style="--swatch: #F1ECE1"></span><strong>메인 컬러 · 배경</strong><small>#F1ECE1</small></li>
+                            <li><span style="--swatch: #354437"></span><strong>메인 컬러</strong><small>#354437</small></li>
+                            <li><span style="--swatch: #A4B28E"></span><strong>서브 컬러 1</strong><small>#A4B28E</small></li>
+                            <li><span style="--swatch: #B8764E"></span><strong>서브 컬러 2</strong><small>#B8764E</small></li>
+                            <li><span style="--swatch: #D8D5CA"></span><strong>서브 컬러 3</strong><small>#D8D5CA</small></li>
+                        </ul>
+                        <p class="project-caption">주요 색상은 Figma 디자인 시스템 기준입니다.</p>
+                        <div class="project-system-grid">
+                            <article class="project-type-card" aria-labelledby="aesop-typography-title">
+                                <div class="project-type-intro">
+                                    <h4 id="aesop-typography-title">TYPOGRAPHY</h4>
+                                    <div class="project-font-description">
+                                        <h5>PRETENDARD</h5>
+                                        <p>본문과 UI에 사용하는 기본 서체입니다. Regular와 Bold의 굵기 차이로 정보의 위계를 구분하고, 제목부터 제품 설명까지 일관된
+                                            인상을 만듭니다.</p>
+                                    </div>
+                                </div>
+                                <p class="project-type-note">TYPE SCALE <span>PC 기준 · 1rem = 16px</span></p>
+                                <div class="project-type-scale" role="table" aria-label="프로젝트 타이포그래피 크기 체계">
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 39px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">메인 제목
+                                            · H1</span><span role="cell">39px</span><span role="cell">2.4414rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 39px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">메인 제목
+                                            · H1</span><span role="cell">39px</span><span role="cell">2.4414rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 31px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">섹션 제목
+                                            · H2</span><span role="cell">31px</span><span role="cell">1.9375rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 31px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">섹션 제목
+                                            · H2</span><span role="cell">31px</span><span role="cell">1.9375rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 25px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">콘텐츠 제목
+                                            · H3</span><span role="cell">25px</span><span role="cell">1.5625rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 25px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">콘텐츠 제목
+                                            · H3</span><span role="cell">25px</span><span role="cell">1.5625rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 20px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">작은 제목
+                                            · H4</span><span role="cell">20px</span><span role="cell">1.25rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 20px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">작은 제목
+                                            · H4</span><span role="cell">20px</span><span role="cell">1.25rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 16px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">본문 ·
+                                            강조</span><span role="cell">16px</span><span role="cell">1rem</span></div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 16px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">본문 ·
+                                            기본</span><span role="cell">16px</span><span role="cell">1rem</span></div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 13px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">보조
+                                            본문</span><span role="cell">13px</span><span role="cell">0.8125rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 10px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">Aesop</span><span role="cell">세부
+                                            설명</span><span role="cell">10px</span><span role="cell">0.625rem</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="project-story-section" aria-labelledby="aesop-responsive-title">
+                        <p class="project-eyebrow">05 / RESPONSIVE WEB</p>
+                        <h3 id="aesop-responsive-title">하나의 웹사이트, 다양한 화면.</h3>
+                        <p>PC, 태블릿, 모바일 환경에 맞춰 레이아웃과 여백, 글자 크기를 조정하는 반응형 웹으로 제작했습니다.</p>
+                        <div class="project-responsive-grid">
+                            <article><span>PC</span>
+                                <h4>1920px x 1024px</h4>
+                                <p>넓은 화면에 맞는 콘텐츠 배치와 기본 16px 글자 크기를 사용합니다.</p>
+                            </article>
+                            <article><span>TABLET</span>
+                                <h4>1024px x 768px</h4>
+                                <p>좌우 여백을 줄이고 태블릿용 메뉴와 화면 구성을 적용합니다.</p>
+                            </article>
+                            <article><span>MOBILE</span>
+                                <h4>402px x 874px</h4>
+                                <p>기본 글자 크기와 여백을 조정하며, 더 좁은 화면에서는 제품 목록과 구매 버튼 배치를 재구성합니다.</p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
 
                 <div class="visual-works-gallery">
                     <article class="visual-device visual-device-pc">
                         <span class="visual-device-label">PC</span>
                         <div class="visual-pc-frame">
                             <div class="visual-pc-screen visual-preview-screen">
-                                <iframe class="visual-site-frame" data-device="pc" data-width="1920" data-height="1000"
+                                <iframe class="visual-site-frame" data-device="pc" data-width="1920" data-height="1024"
                                     title="PC 홈페이지 미리보기" tabindex="-1" loading="lazy"></iframe>
                             </div>
                         </div>
@@ -465,7 +652,7 @@
                         <span class="visual-device-label">PAD</span>
                         <div class="visual-pad-frame">
                             <div class="visual-pad-screen visual-preview-screen">
-                                <iframe class="visual-site-frame" data-device="pad" data-width="1024" data-height="768"
+                                <iframe class="visual-site-frame" data-device="pad" data-width="1024" data-height="1366"
                                     title="태블릿 홈페이지 미리보기" loading="lazy"></iframe>
                             </div>
                         </div>
@@ -475,14 +662,262 @@
                         <span class="visual-device-label">MO</span>
                         <div class="visual-mo-frame">
                             <div class="visual-mo-screen visual-preview-screen">
-                                <iframe class="visual-site-frame" data-device="mo" data-width="390" data-height="844"
+                                <iframe class="visual-site-frame" data-device="mo" data-width="402" data-height="874"
                                     title="모바일 홈페이지 미리보기" loading="lazy"></iframe>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
-            
+
+        </section>
+        <section id="personal-projects" class="visual-works is-personal"
+            data-project-url="https://octos8.github.io/LUNE-shoppingmall/" aria-labelledby="personal-projects-title">
+            <div class="container visual-works-inner">
+                <header class="section-heading">
+                    <p class="section-label">PERSONAL PROJECT</p>
+                    <h2 id="personal-projects-title" lang="en">
+                        <img class="visual-project-logo" src="./img/logo-white.svg" alt="LUNE" width="254" height="66">
+                    </h2>
+                </header>
+
+                <div class="project-story">
+                    <section class="project-story-intro" aria-labelledby="lune-overview-title">
+                        <div>
+                            <p class="project-eyebrow">01 / OVERVIEW</p>
+                            <h3 id="lune-overview-title">상품을 발견하는 순간부터,<br>편리한 쇼핑 경험까지.</h3>
+                            <p class="project-draft">제작 방향 · 설명 초안</p>
+                            <p>LUNE 쇼핑몰의 상품을 편리하게 탐색할 수 있도록 구성하는 것을 목표로 합니다. 상품 이미지와 핵심 정보에 집중하고, PC부터 모바일까지 자연스럽게 이어지는
+                                쇼핑 경험을 지향합니다.</p>
+                        </div>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>PROJECT INFO</dt>
+                                <dd>LUNE 쇼핑몰 개인 프로젝트입니다. 브랜드 소개와 주요 상품군은 추후 추가할 예정입니다.</dd>
+                            </div>
+                            <div>
+                                <dt>PROJECT TYPE</dt>
+                                <dd>
+                                    개인 프로젝트 / LUNE 쇼핑몰
+                                    <div class="visual-explore-actions">
+                                        <a href="https://octos8.github.io/LUNE-shoppingmall/" target="_blank"
+                                            rel="noopener noreferrer">LUNE 홈페이지 보기 ↗</a>
+                                    </div>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>OUTPUT</dt>
+                                <dd>PC · Tablet · Mobile 반응형 웹</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <section class="project-story-section project-summary-section" aria-labelledby="aesop-role-title">
+                        <p class="project-eyebrow">02 / MY CONTRIBUTION</p>
+                        <h3 id="aesop-role-title">나의 기여도</h3>
+                        <dl class="project-summary-list">
+                            <div>
+                                <dt>기여도</dt>
+                                <dd><span class="project-summary-badge">전체 100%</span></dd>
+                            </div>
+                            <div>
+                                <dt>작업기간</dt>
+                                <dd><span class="project-summary-badge">4주</span></dd>
+                            </div>
+                            <div>
+                                <dt>디자인 툴</dt>
+                                <dd><span class="project-summary-badge">Photoshop</span><span
+                                        class="project-summary-badge">Illustrator</span><span
+                                        class="project-summary-badge">Figma</span></dd>
+                            </div>
+                            <div>
+                                <dt>퍼블리싱 언어</dt>
+                                <dd><span class="project-summary-badge">HTML5</span><span
+                                        class="project-summary-badge">CSS3</span><span
+                                        class="project-summary-badge">JAVASCRIPT</span></dd>
+                            </div>
+                            <div>
+                                <dt>플러그인</dt>
+                                <dd><span class="project-summary-badge">Swiper.js</span></dd>
+                            </div>
+                        </dl>
+                        <p class="project-caption">각 수치는 전체 프로젝트 및 해당 작업 영역에서의 기여도를 나타냅니다.</p>
+                    </section>
+
+                    <section class="project-story-section" aria-labelledby="lune-improvement-title">
+                        <p class="project-eyebrow">03 / ACCESSIBILITY &amp; SHOPPING FLOW</p>
+                        <h3 id="lune-improvement-title">쉽게 발견하고, 충분히 이해하고,<br>자연스럽게 구매로.</h3>
+                        <p>어떻게 하면 누구나 원하는 가구에 쉽게 접근할 수 있을까? 상품을 발견하는 순간부터 정보를 읽고 선택하는 과정까지, 시선의 흐름과 조작의 편의성을 함께 고려하는 것을 설계 방향으로 잡았습니다.</p>
+                        <ol class="project-comparison lune-shopping-flow" aria-label="상품 발견부터 구매까지의 설계 방향">
+                            <li><article>
+                                <span class="project-card-label">01 / DISCOVER</span>
+                                <h4>시선이 머무는 상품 발견</h4>
+                                <p><b>시선의 시작</b> 공간 속 가구 이미지를 중심으로 관심을 끌고, 명확한 카테고리와 상품명으로 원하는 제품을 쉽게 찾도록 구성합니다.</p>
+                                <p><b>접근성을 위한 방향</b> 이미지에는 상품을 설명하는 대체 텍스트를 제공하고, 색상에만 의존하지 않는 메뉴 표시와 키보드 포커스로 탐색 위치를 알 수 있게 합니다.</p>
+                            </article></li>
+                            <li><article>
+                                <span class="project-card-label">02 / UNDERSTAND</span>
+                                <h4>시선을 따라 읽히는 정보</h4>
+                                <p><b>관심에서 이해로</b> 상품 이미지 → 상품명과 가격 → 소재·크기·옵션 순서로 정보를 배치해, 눈길이 핵심 정보로 이어지도록 합니다.</p>
+                                <p><b>선택을 돕는 방향</b> 글자 크기와 명도 대비, 충분한 여백으로 읽기 편하게 구성하고, 옵션에는 명확한 이름과 선택 상태를 표시해 상품을 비교하고 판단할 수 있게 합니다.</p>
+                            </article></li>
+                            <li><article>
+                                <span class="project-card-label">03 / PURCHASE</span>
+                                <h4>확신을 구매로 연결</h4>
+                                <p><b>이해에서 행동으로</b> 선택한 옵션과 최종 금액, 배송 정보를 확인한 다음 장바구니 또는 구매 버튼으로 이동하는 흐름을 구성합니다.</p>
+                                <p><b>조작을 돕는 방향</b> 구매 버튼은 주변 요소와 구분하고 터치하기 쉬운 크기로 배치합니다. 키보드로도 선택과 이동이 가능하게 하고, 입력 오류는 해당 항목 가까이 안내해 구매를 이어갈 수 있도록 합니다.</p>
+                            </article></li>
+                        </ol>
+                        <p class="project-caption">설계 목표: 상품 발견 → 정보 이해 → 옵션 선택 → 구매 확인. 사용자가 충분한 정보를 바탕으로 스스로 선택할 수 있는 쇼핑 경험을 지향합니다.</p>
+                    </section>
+
+                    <section class="project-story-section" aria-labelledby="lune-system-title">
+                        <p class="project-eyebrow">04 / DESIGN SYSTEM</p>
+                        <h3 id="lune-system-title">일관된 화면을 만드는 기준</h3>
+                        <p class="project-caption">따뜻한 크림과 살구 계열의 색상, Pretendard 서체를 사용하는 LUNE 디자인 시스템입니다.</p>
+                        <h4 class="project-subtitle">Color palette</h4>
+                        <ul class="project-palette" aria-label="프로젝트 색상">
+                            <li><span style="--swatch: #FFF2D7"></span><strong>메인 컬러 · 배경</strong><small>#FFF2D7</small>
+                            </li>
+                            <li><span style="--swatch: #FFE0B5"></span><strong>메인 컬러</strong><small>#FFE0B5</small></li>
+                            <li><span style="--swatch: #F8C794"></span><strong>서브 컬러 1</strong><small>#F8C794</small>
+                            </li>
+                            <li><span style="--swatch: #D8AE7E"></span><strong>서브 컬러 2</strong><small>#D8AE7E</small>
+                            </li>
+                        </ul>
+                        <div class="project-system-grid">
+                            <article class="project-type-card" aria-labelledby="lune-typography-title">
+                                <div class="project-type-intro">
+                                    <h4 id="lune-typography-title">TYPOGRAPHY</h4>
+                                    <div class="project-font-description">
+                                        <h5>PRETENDARD</h5>
+                                        <p>제목과 본문, UI에 Pretendard를 공통으로 사용합니다. Regular와 Bold의 굵기 차이로 기본 정보와 강조 정보를 구분하고,
+                                            화면 전반에 일관된 인상을 만듭니다.</p>
+                                    </div>
+                                </div>
+                                <p class="project-type-note">TYPE SCALE <span>1rem = 16px</span></p>
+                                <div class="project-type-scale" role="table" aria-label="프로젝트 타이포그래피 크기 체계">
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 39px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">메인 제목 ·
+                                            H1</span><span role="cell">39px</span><span role="cell">2.4414rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 39px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">메인 제목 ·
+                                            H1</span><span role="cell">39px</span><span role="cell">2.4414rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 31px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">섹션 제목 ·
+                                            H2</span><span role="cell">31px</span><span role="cell">1.9375rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 31px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">섹션 제목 ·
+                                            H2</span><span role="cell">31px</span><span role="cell">1.9375rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 25px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">콘텐츠 제목
+                                            · H3</span><span role="cell">25px</span><span role="cell">1.5625rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 25px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">콘텐츠 제목
+                                            · H3</span><span role="cell">25px</span><span role="cell">1.5625rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 20px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">작은 제목 ·
+                                            H4</span><span role="cell">20px</span><span role="cell">1.25rem</span></div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 20px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">작은 제목 ·
+                                            H4</span><span role="cell">20px</span><span role="cell">1.25rem</span></div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 16px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">본문 ·
+                                            강조</span><span role="cell">16px</span><span role="cell">1rem</span></div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 16px; --sample-weight: 700"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">본문 ·
+                                            기본</span><span role="cell">16px</span><span role="cell">1rem</span></div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 13px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">보조
+                                            본문</span><span role="cell">13px</span><span role="cell">0.8125rem</span>
+                                    </div>
+                                    <div class="project-type-row" role="row"
+                                        style="--sample-size: 10px; --sample-weight: 400"><span
+                                            class="project-type-sample" role="cell">LUNE</span><span role="cell">세부
+                                            설명</span><span role="cell">10px</span><span role="cell">0.625rem</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="project-story-section" aria-labelledby="lune-responsive-title">
+                        <p class="project-eyebrow">05 / RESPONSIVE WEB</p>
+                        <h3 id="lune-responsive-title">하나의 웹사이트, 다양한 화면.</h3>
+                        <p>PC, 태블릿, 모바일 화면에서 LUNE을 비교할 수 있도록 기기별 미리보기를 구성했습니다. 아래 크기는 미리보기 기준이며, 실제 반응형 구현 범위는 확인 후 추가할
+                            예정입니다.</p>
+                        <div class="project-responsive-grid">
+                            <article><span>PC</span>
+                                <h4>1920px x 1024px</h4>
+                                <p>넓은 화면에서 상품 이미지와 정보의 배치를 확인합니다.</p>
+                            </article>
+                            <article><span>TABLET</span>
+                                <h4>1024px x 1366px</h4>
+                                <p>태블릿 화면에서 메뉴와 상품 목록의 흐름을 확인합니다.</p>
+                            </article>
+                            <article><span>MOBILE</span>
+                                <h4>402px x 874px</h4>
+                                <p>좁은 화면에서 텍스트의 가독성과 상품 탐색 동선을 확인합니다.</p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="visual-works-gallery">
+                    <article class="visual-device visual-device-pc">
+                        <span class="visual-device-label">PC</span>
+                        <div class="visual-pc-frame">
+                            <div class="visual-pc-screen visual-preview-screen">
+                                <iframe class="visual-site-frame" data-device="pc" data-width="1920" data-height="1024"
+                                    title="LUNE PC 홈페이지 미리보기" tabindex="-1"
+                                    src="https://octos8.github.io/LUNE-shoppingmall/" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="visual-pc-stand" aria-hidden="true"></div>
+                        <div class="visual-pc-base" aria-hidden="true"></div>
+                    </article>
+
+                    <article class="visual-device visual-device-pad">
+                        <span class="visual-device-label">PAD</span>
+                        <div class="visual-pad-frame">
+                            <div class="visual-pad-screen visual-preview-screen">
+                                <iframe class="visual-site-frame" data-device="pad" data-width="1024" data-height="1366"
+                                    title="LUNE 태블릿 홈페이지 미리보기" tabindex="-1"
+                                    src="https://octos8.github.io/LUNE-shoppingmall/" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="visual-device visual-device-mo">
+                        <span class="visual-device-label">MO</span>
+                        <div class="visual-mo-frame">
+                            <div class="visual-mo-screen visual-preview-screen">
+                                <iframe class="visual-site-frame" data-device="mo" data-width="402" data-height="874"
+                                    title="LUNE 모바일 홈페이지 미리보기" tabindex="-1"
+                                    src="https://octos8.github.io/LUNE-shoppingmall/" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
         </section>
     </main>
     <button class="back-to-top" type="button" aria-label="페이지 맨 위로 이동">

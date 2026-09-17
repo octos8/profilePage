@@ -222,8 +222,6 @@
 }
 .certificate-item {
   min-width: 0;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd9d4;
   overflow-wrap: anywhere;
 }
 .certificate-item h4 {

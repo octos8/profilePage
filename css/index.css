@@ -1,8 +1,7 @@
 /* =========================================================
    BASIC
 ========================================================= */
-body,
-.site-header {
+body{
   background-color: #fff;
 }
 /* =========================================================
@@ -80,7 +79,7 @@ body,
   font-family: Arial, Helvetica, sans-serif;
   font-size: 88px;
   font-weight: 900;
-  line-height: 1.02;
+  line-height: 1.4;
   letter-spacing: -.065em;
   color: #080808;
 }
@@ -506,7 +505,7 @@ body,
 
 .design-banner-bg-layer {
   position: absolute;
-  inset: 0;
+  inset: 80px;
   background-color: #171717;
   background-position: center;
   background-size: contain;
@@ -534,12 +533,6 @@ body,
 
 .design-banner-bg {
   z-index: -3;
-  background:
-    linear-gradient(110deg,
-      rgba(0, 0, 0, .08),
-      rgba(0, 0, 0, .12)),
-    url("../img/profile-workspace.jpg") center / contain no-repeat;
-  background-color: #171717;
 }
 
 
@@ -585,7 +578,7 @@ body,
 
 .design-banner-content h2 {
   color: #fff;
-  font-size: 66px;
+  font-size: 62px;
   font-weight: 800;
   line-height: .93;
   letter-spacing: -.055em;
