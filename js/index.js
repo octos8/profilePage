@@ -110,6 +110,15 @@
   const accordions = document.querySelectorAll('.design-accordion');
   accordions.forEach((accordion) => {
     const panels = [...accordion.querySelectorAll('.design-accordion-panel')];
+    let autoplayTimer;
+    function restartAutoplay() {
+      window.clearInterval(autoplayTimer);
+      if (panels.length < 2) return;
+      autoplayTimer = window.setInterval(() => {
+        const current = panels.findIndex((panel) => panel.classList.contains('is-active'));
+        activatePanel(panels[(current + 1) % panels.length]);
+      }, 2500);
+    }
     function activatePanel(selectedPanel) {
       panels.forEach((panel) => {
         const active = panel === selectedPanel;
@@ -117,6 +126,14 @@
         const button = panel.querySelector('.design-accordion-button');
         button?.setAttribute('aria-expanded', String(active));
       });
+      if (window.matchMedia('(max-width: 64rem)').matches) {
+        const left = accordion.scrollLeft + selectedPanel.getBoundingClientRect().left - accordion.getBoundingClientRect().left;
+        accordion.scrollTo({
+          left,
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+        });
+      }
+      restartAutoplay();
     }
     panels.forEach((panel) => {
       const button = panel.querySelector('.design-accordion-button');
@@ -124,13 +141,6 @@
       button.setAttribute('aria-expanded', String(panel.classList.contains('is-active')));
       button.addEventListener('click', () => {
         activatePanel(panel);
-        if (window.matchMedia('(max-width: 64rem)').matches) {
-          const left = accordion.scrollLeft + panel.getBoundingClientRect().left - accordion.getBoundingClientRect().left;
-          accordion.scrollTo({
-            left,
-            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
-          });
-        }
       });
       button.addEventListener('mouseenter', () => {
         if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
@@ -149,6 +159,7 @@
         panels[next].querySelector('.design-accordion-button')?.focus();
       });
     });
+    restartAutoplay();
   });
 })();
 

@@ -1,5 +1,4 @@
-body,
-.site-header {
+body {
   background-color: #fff;
 }
 
@@ -155,7 +154,8 @@ body,
   top: -25%;
   right: -5%;
   width: 400px;
-  background-color: #eaeaea;
+  background-color: #fff;
+  border: 1.5px solid #171717;
 }
 
 .hero-circle-code span {
@@ -165,13 +165,24 @@ body,
 
 .hero-circle-gray {
   bottom: -10%;
-  left: -8%;
+  left: -6%;
   width: 400px;
   background-color: #eaeaea;
 }
 
+.hero-circle-gray .hero-circle.view {
+  position: static;
+  z-index: 1;
+  aspect-ratio: auto;
+  color: #171717;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: .04em;
+  transform: rotate(45deg);
+}
+
 .hero-circle-arrow {
-  bottom: 15%;
+  bottom: 25%;
   left: 11%;
   width: 130px;
   background-color: #ff481f;
@@ -222,12 +233,12 @@ body,
 }
 
 .hero-dot-right {
-  top: 20%;
+  top: 25%;
   right: 21%;
 }
 
 .hero-dot-bottom {
-  right: 6%;
+  right: 21%;
   bottom: 30%;
 }
 
@@ -781,6 +792,7 @@ body,
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .design-accordion-panel,
   .design-accordion-button img,
   .design-accordion-number {
@@ -821,6 +833,7 @@ body,
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .design-accordion-panel,
   .design-accordion-button img,
   .design-accordion-number {
@@ -1612,6 +1625,7 @@ body,
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero-link,
   .hero-circle,
   .hero-circle>span,

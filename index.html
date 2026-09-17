@@ -46,8 +46,8 @@
             <div class="intro-sticky">
 
                 <section id="about" class="hero" aria-labelledby="hero-title">
-                    <!-- 배경 장식: 스크린리더에서는 읽지 않습니다. -->
-                    <div class="hero-decoration" aria-hidden="true">
+                    <!-- 배경 장식 및 프로필 이동 링크 -->
+                    <div class="hero-decoration">
                         <div class="hero-circle hero-circle-design">
                             <span>DESIGN</span>
                         </div>
@@ -56,11 +56,13 @@
                             <span>HTML / CSS</span>
                         </div>
 
-                        <div class="hero-circle hero-circle-gray"></div>
-
-                        <div class="hero-circle hero-circle-arrow">
-                            <span>↗</span>
+                        <div class="hero-circle hero-circle-gray">
+                            <span class="hero-circle view">VIEW</span>
                         </div>
+
+                        <a class="hero-circle hero-circle-arrow" href="#profile" aria-label="프로필로 이동">
+                            <span aria-hidden="true">↗</span>
+                        </a>
 
                         <div class="hero-circle hero-circle-creative">
                             <span>CREATIVE</span>
@@ -81,7 +83,7 @@
                         </h1>
 
                         <p class="hero-description">
-                            디자인의 기본에서 좋은 화면이 시작된다고 생각합니다.
+                            좋은 디자인은 기본에서 시작됩니다.
                         </p>
                     </div>
                 </section>
