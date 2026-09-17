@@ -279,7 +279,7 @@
   transform: translateY(-12px) rotate(-3deg);
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 65.625rem) {
   .visual-works .visual-works-gallery {
     height: 500px;
   }
@@ -297,13 +297,13 @@
   }
 }
 
-@media (min-width: 721px) and (max-width: 1050px) {
+@media (min-width: 45.0625rem) and (max-width: 65.625rem) {
   .visual-works .section-heading :is(h1, h2) {
     font-size: 50px;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 45rem) {
   .visual-works {
     min-height: auto;
     padding: 80px 16px 70px;
@@ -373,7 +373,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 22.5rem) {
   .visual-works .section-heading :is(h1, h2) {
     font-size: 40px;
   }
@@ -441,7 +441,7 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 22.5rem) {
 
   .visual-works .section-heading :is(h1, h2) {
     font-size: 40px;
@@ -502,10 +502,22 @@
 }
 
 .project-story h3 {
-  font-size: clamp(26px, 3vw, 40px);
+  font-size: 40px;
   line-height: 1.35;
   letter-spacing: -0.04em;
   margin-bottom: 24px;
+}
+
+@media (max-width: 64rem) {
+  .project-story h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .project-story h3 {
+    font-size: 26px;
+  }
 }
 
 .project-story h4 {
@@ -594,10 +606,22 @@
 
 .project-contribution strong {
   display: block;
-  font-size: clamp(48px, 5vw, 68px);
+  font-size: 68px;
   font-weight: 500;
   line-height: 1.3;
   margin: 16px 0;
+}
+
+@media (max-width: 64rem) {
+  .project-contribution strong {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .project-contribution strong {
+    font-size: 48px;
+  }
 }
 
 .project-contribution small {
@@ -775,7 +799,7 @@
   letter-spacing: -0.025em;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .project-type-intro {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
@@ -791,7 +815,7 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 33.75rem) {
   .project-type-intro {
     grid-template-columns: minmax(0, 1fr);
     margin-bottom: 32px;
@@ -828,7 +852,7 @@
   font-size: 14px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .project-story-intro {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -839,7 +863,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 45rem) {
   .visual-works .project-story {
     margin-top: 70px;
     font-size: 14px;
@@ -912,7 +936,7 @@
 
 }
 
-@media (max-width: 540px) {
+@media (max-width: 33.75rem) {
   .project-summary-list>div {
     grid-template-columns: 86px minmax(0, 1fr);
     gap: 10px;
@@ -927,7 +951,7 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-@media (max-width: 720px) {
+@media (max-width: 45rem) {
   #personal-projects .project-palette {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -937,9 +961,45 @@
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   align-items: stretch;
-  gap: clamp(32px, 8vw, 110px);
-  padding: clamp(24px, 5vw, 64px);
+  gap: 110px;
+  padding: 64px;
   background: #fff;
+}
+
+@media (max-width: 64rem) {
+  .project-palette.project-palette-board {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .project-palette.project-palette-board {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .project-palette.project-palette-board {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 64rem) {
+  .project-palette.project-palette-board {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .project-palette.project-palette-board {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .project-palette.project-palette-board {
+    gap: 32px;
+  }
 }
 .project-palette-board .palette-label {
   margin: 0 0 8px;
@@ -968,7 +1028,7 @@
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 .palette-tone-strip li { aspect-ratio: 1; }
-@media (max-width: 540px) {
+@media (max-width: 33.75rem) {
   .project-palette.project-palette-board {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
