@@ -1,3 +1,54 @@
+/* Collapse the fixed navigation after scrolling. */
+(() => {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const toggle = header.querySelector('.nav-toggle');
+  const nav = header.querySelector('.site-nav');
+  if (!toggle || !nav) return;
+  let collapsed = false;
+  let open = false;
+  function render() {
+    header.classList.toggle('is-scrolled', collapsed);
+    header.classList.toggle('is-menu-open', open);
+    toggle.hidden = !collapsed;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    nav.hidden = collapsed && !open;
+  }
+  function closeMenu(returnFocus = false) {
+    open = false;
+    render();
+    if (returnFocus && collapsed) toggle.focus({ preventScroll: true });
+  }
+  function updateHeader() {
+    const next = window.scrollY > 24;
+    if (next !== collapsed) {
+      const focused = document.activeElement;
+      collapsed = next;
+      open = false;
+      render();
+      if (collapsed && nav.contains(focused)) toggle.focus({ preventScroll: true });
+      if (!collapsed && focused === toggle) nav.querySelector('a')?.focus({ preventScroll: true });
+    }
+  }
+  toggle.addEventListener('click', () => { open = !open; render(); });
+  nav.addEventListener('click', (event) => {
+    if (event.target.closest('a')) closeMenu(nav.contains(document.activeElement));
+  });
+  document.addEventListener('click', (event) => {
+    if (open && !header.contains(event.target)) closeMenu(nav.contains(document.activeElement));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && open) { event.preventDefault(); closeMenu(true); }
+  });
+  header.addEventListener('focusout', (event) => {
+    if (open && !header.contains(event.relatedTarget)) closeMenu();
+  });
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('pageshow', updateHeader);
+  render();
+  updateHeader();
+})();
 /* =========================================================
    INTRO SCROLL
    HERO → WORK PREVIEW
