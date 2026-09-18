@@ -2105,3 +2105,70 @@
     bottom: 27%;
   }
 }
+/* =========================================================
+   MOBILE HEADER - 448px 이하
+   메뉴 6개를 한 줄로 고정
+========================================================= */
+@media (max-width: 448px) {
+  .site-header {
+    width: 100%;
+  }
+
+  .site-header .header-inner {
+    width: 100%;
+    max-width: none;
+    min-height: 44px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-header .nav-toggle {
+    display: none !important;
+  }
+
+  .site-header .site-nav {
+    position: static;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .site-header .nav-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    list-style: none;
+    white-space: nowrap;
+  }
+
+  .site-header .nav-list > li {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-header .nav-list > li > a {
+    display: block;
+    width: auto;
+    padding: 14px 0;
+    font-size: 6.5px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
