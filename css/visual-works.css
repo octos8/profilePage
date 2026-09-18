@@ -176,7 +176,7 @@
 
 .visual-device-pad {
   z-index: 6;
-  right: 0;
+  right: 5%;
   bottom: 20px;
   width: min(320px, 27vw);
   transition-delay: 0.14s;
@@ -199,7 +199,7 @@
 
 .visual-device-mo {
   z-index: 7;
-  left: 3%;
+  left: 14%;
   bottom: 0;
   width: min(185px, 16vw);
   transition-delay: 0.28s;
