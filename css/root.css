@@ -20,7 +20,7 @@
   --color-text: #111315;
   --color-accent: #ff3b30;
   --color-accent-hover: #df281e;
-  --content-width: 90rem;
+  --content-width: 1440px;
   --page-padding: 1.5rem;
   --font-size-pc: 1rem;
   --font-size-pad: 0.875rem;
@@ -36,17 +36,17 @@ html {
     scroll-behavior: auto;
   }
 }
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
   html {
     font-size: var(--font-size-pad);
   }
 }
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   html {
     font-size: var(--font-size-mo);
   }
 }
-@media (max-width: 25.125rem) {
+@media (max-width: 402px) {
   html {
     font-size: 0.75rem;
   }

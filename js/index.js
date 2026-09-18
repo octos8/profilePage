@@ -106,27 +106,32 @@
 })();
 
 (() => {
-
   const accordions = document.querySelectorAll('.design-accordion');
   accordions.forEach((accordion) => {
     const panels = [...accordion.querySelectorAll('.design-accordion-panel')];
+    const sliderView = window.matchMedia('(max-width: 1024px)');
     let autoplayTimer;
+    let scrollTimer;
+    let isInteracting = false;
     function restartAutoplay() {
       window.clearInterval(autoplayTimer);
-      if (panels.length < 2) return;
+      if (panels.length < 2 || isInteracting) return;
       autoplayTimer = window.setInterval(() => {
         const current = panels.findIndex((panel) => panel.classList.contains('is-active'));
         activatePanel(panels[(current + 1) % panels.length]);
       }, 2500);
     }
-    function activatePanel(selectedPanel) {
+    function updateActivePanel(selectedPanel) {
       panels.forEach((panel) => {
         const active = panel === selectedPanel;
         panel.classList.toggle('is-active', active);
         const button = panel.querySelector('.design-accordion-button');
         button?.setAttribute('aria-expanded', String(active));
       });
-      if (window.matchMedia('(max-width: 64rem)').matches) {
+    }
+    function activatePanel(selectedPanel) {
+      updateActivePanel(selectedPanel);
+      if (sliderView.matches) {
         const left = accordion.scrollLeft + selectedPanel.getBoundingClientRect().left - accordion.getBoundingClientRect().left;
         accordion.scrollTo({
           left,
@@ -135,6 +140,32 @@
       }
       restartAutoplay();
     }
+    function pauseAutoplay() {
+      isInteracting = true;
+      window.clearInterval(autoplayTimer);
+    }
+    function resumeAutoplay() {
+      isInteracting = false;
+      restartAutoplay();
+    }
+    accordion.addEventListener('pointerenter', pauseAutoplay);
+    accordion.addEventListener('pointerleave', resumeAutoplay);
+    accordion.addEventListener('pointerdown', pauseAutoplay);
+    accordion.addEventListener('scroll', () => {
+      if (!sliderView.matches) return;
+      window.clearInterval(autoplayTimer);
+      window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => {
+        const start = accordion.getBoundingClientRect().left;
+        const atEnd = accordion.scrollLeft >= accordion.scrollWidth - accordion.clientWidth - 2;
+        const nearest = atEnd ? panels[panels.length - 1] : panels.reduce((closest, panel) =>
+          Math.abs(panel.getBoundingClientRect().left - start) < Math.abs(closest.getBoundingClientRect().left - start)
+            ? panel : closest, panels[0]);
+        if (nearest) updateActivePanel(nearest);
+        if (!accordion.matches(':hover')) isInteracting = false;
+        restartAutoplay();
+      }, 180);
+    }, { passive: true });
     panels.forEach((panel) => {
       const button = panel.querySelector('.design-accordion-button');
       if (!button) return;
@@ -143,7 +174,7 @@
         activatePanel(panel);
       });
       button.addEventListener('mouseenter', () => {
-        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        if (!sliderView.matches && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
           activatePanel(panel);
         }
       });
