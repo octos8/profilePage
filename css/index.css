@@ -2123,11 +2123,6 @@
     align-items: center;
     justify-content: center;
   }
-
-  .site-header .nav-toggle {
-    display: none !important;
-  }
-
   .site-header .site-nav {
     position: static;
     width: 100%;
