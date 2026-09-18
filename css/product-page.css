@@ -155,10 +155,11 @@
   padding: 4px 16px;
   border: 0;
   border-radius: 24px;
-  background: #080808;
-  color: #fff;
+  background: #fff;
+  color: #000;
   font: inherit;
   cursor: pointer;
+  border: 1px solid #000;
 }
 
 .product-page-close:focus-visible {

@@ -170,10 +170,10 @@
 }
 .work-preview-title {
   position: absolute;
-  left: 37%;
+  left: 29%;
   bottom: 1.625rem;
   z-index: 4;
-  width: 31%;
+  width: 41%;
   text-align: center;
 }
 .work-preview .section-label {
